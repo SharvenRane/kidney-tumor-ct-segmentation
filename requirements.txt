@@ -1,0 +1,13 @@
+monai==1.5.2
+torch>=2.4.1
+numpy>=1.24,<3.0
+nibabel
+pydicom>=3.0
+highdicom>=0.27
+itk
+scikit-image
+matplotlib
+mlflow
+tcia_utils
+jsonschema
+pytest

@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+mlruns/
+outputs/*.pt
+outputs/explain/*.png
+outputs/*.log
+*.log
+*.pid
+bundle/models/*.pt
+bundle/eval/
+# data and caches live outside the repo; never commit imaging data
+data/
+*.nii.gz
+*.dcm

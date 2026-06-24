@@ -1,0 +1,825 @@
+{
+ "n_test": 32,
+ "classes": [
+  "kidney",
+  "tumor"
+ ],
+ "overall": {
+  "kidney": {
+   "dice": {
+    "mean": 0.9201,
+    "ci95": [
+     0.8892,
+     0.9459
+    ],
+    "n": 32
+   },
+   "hd95": {
+    "mean": 14.2059,
+    "ci95": [
+     4.0,
+     29.9191
+    ],
+    "n": 32
+   },
+   "sensitivity": {
+    "mean": 0.9167,
+    "ci95": [
+     0.8722,
+     0.9511
+    ],
+    "n": 32
+   },
+   "specificity": {
+    "mean": 0.9995,
+    "ci95": [
+     0.9993,
+     0.9997
+    ],
+    "n": 32
+   }
+  },
+  "tumor": {
+   "dice": {
+    "mean": 0.6687,
+    "ci95": [
+     0.5769,
+     0.755
+    ],
+    "n": 32
+   },
+   "hd95": {
+    "mean": 37.3941,
+    "ci95": [
+     20.4134,
+     57.9997
+    ],
+    "n": 32
+   },
+   "sensitivity": {
+    "mean": 0.6582,
+    "ci95": [
+     0.5697,
+     0.742
+    ],
+    "n": 32
+   },
+   "specificity": {
+    "mean": 0.9997,
+    "ci95": [
+     0.9994,
+     0.9999
+    ],
+    "n": 32
+   }
+  }
+ },
+ "subgroups": {
+  "sex": {
+   "F": {
+    "kidney": {
+     "mean": 0.9345,
+     "ci95": [
+      0.9054,
+      0.9559
+     ],
+     "n": 14
+    },
+    "tumor": {
+     "mean": 0.6621,
+     "ci95": [
+      0.5193,
+      0.7874
+     ],
+     "n": 14
+    }
+   },
+   "M": {
+    "kidney": {
+     "mean": 0.909,
+     "ci95": [
+      0.8555,
+      0.9482
+     ],
+     "n": 18
+    },
+    "tumor": {
+     "mean": 0.6738,
+     "ci95": [
+      0.552,
+      0.7876
+     ],
+     "n": 18
+    }
+   }
+  },
+  "age_band": {
+   "<50": {
+    "kidney": {
+     "mean": 0.9435,
+     "ci95": [
+      0.9149,
+      0.9661
+     ],
+     "n": 7
+    },
+    "tumor": {
+     "mean": 0.7605,
+     "ci95": [
+      0.6338,
+      0.8632
+     ],
+     "n": 7
+    }
+   },
+   "50-64": {
+    "kidney": {
+     "mean": 0.9198,
+     "ci95": [
+      0.8694,
+      0.9558
+     ],
+     "n": 17
+    },
+    "tumor": {
+     "mean": 0.6974,
+     "ci95": [
+      0.5841,
+      0.7959
+     ],
+     "n": 17
+    }
+   },
+   ">=65": {
+    "kidney": {
+     "mean": 0.9004,
+     "ci95": [
+      0.8385,
+      0.9425
+     ],
+     "n": 8
+    },
+    "tumor": {
+     "mean": 0.5275,
+     "ci95": [
+      0.2934,
+      0.7357
+     ],
+     "n": 8
+    }
+   }
+  },
+  "manufacturer": {
+   "GE MEDICAL SYSTEMS": {
+    "kidney": {
+     "mean": 0.9541,
+     "ci95": [
+      0.9463,
+      0.964
+     ],
+     "n": 5
+    },
+    "tumor": {
+     "mean": 0.7078,
+     "ci95": [
+      0.4358,
+      0.8528
+     ],
+     "n": 5
+    }
+   },
+   "Philips": {
+    "kidney": {
+     "mean": 0.9679,
+     "ci95": [
+      0.9679,
+      0.9679
+     ],
+     "n": 1
+    },
+    "tumor": {
+     "mean": 0.8978,
+     "ci95": [
+      0.8978,
+      0.8978
+     ],
+     "n": 1
+    }
+   },
+   "SIEMENS": {
+    "kidney": {
+     "mean": 0.9075,
+     "ci95": [
+      0.8635,
+      0.943
+     ],
+     "n": 22
+    },
+    "tumor": {
+     "mean": 0.6589,
+     "ci95": [
+      0.5359,
+      0.7636
+     ],
+     "n": 22
+    }
+   },
+   "TOSHIBA": {
+    "kidney": {
+     "mean": 0.9353,
+     "ci95": [
+      0.9031,
+      0.962
+     ],
+     "n": 4
+    },
+    "tumor": {
+     "mean": 0.6162,
+     "ci95": [
+      0.4769,
+      0.7016
+     ],
+     "n": 4
+    }
+   }
+  }
+ },
+ "per_case": [
+  {
+   "patient_id": "KiTS-00037",
+   "kidney": {
+    "dice": 0.7043,
+    "hd95": 43.39,
+    "sensitivity": 0.5539,
+    "specificity": 0.9998
+   },
+   "tumor": {
+    "dice": 0.0187,
+    "hd95": 54.92,
+    "sensitivity": 0.6858,
+    "specificity": 0.9959
+   },
+   "sex": "M",
+   "age_band": ">=65",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00205",
+   "kidney": {
+    "dice": 0.9415,
+    "hd95": 3.32,
+    "sensitivity": 0.9381,
+    "specificity": 0.9998
+   },
+   "tumor": {
+    "dice": 0.3183,
+    "hd95": 85.38,
+    "sensitivity": 0.2287,
+    "specificity": 1.0
+   },
+   "sex": "F",
+   "age_band": ">=65",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00100",
+   "kidney": {
+    "dice": 0.9731,
+    "hd95": 1.0,
+    "sensitivity": 0.9626,
+    "specificity": 0.9999
+   },
+   "tumor": {
+    "dice": 0.5446,
+    "hd95": 6.8,
+    "sensitivity": 0.5729,
+    "specificity": 1.0
+   },
+   "sex": "F",
+   "age_band": "50-64",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00085",
+   "kidney": {
+    "dice": 0.9598,
+    "hd95": 1.41,
+    "sensitivity": 0.9618,
+    "specificity": 0.9998
+   },
+   "tumor": {
+    "dice": 0.403,
+    "hd95": 8.06,
+    "sensitivity": 0.2577,
+    "specificity": 1.0
+   },
+   "sex": "M",
+   "age_band": "50-64",
+   "manufacturer": "TOSHIBA"
+  },
+  {
+   "patient_id": "KiTS-00196",
+   "kidney": {
+    "dice": 0.9679,
+    "hd95": 1.41,
+    "sensitivity": 0.9697,
+    "specificity": 0.9998
+   },
+   "tumor": {
+    "dice": 0.8978,
+    "hd95": 3.32,
+    "sensitivity": 0.8475,
+    "specificity": 1.0
+   },
+   "sex": "M",
+   "age_band": "50-64",
+   "manufacturer": "Philips"
+  },
+  {
+   "patient_id": "KiTS-00167",
+   "kidney": {
+    "dice": 0.9642,
+    "hd95": 1.41,
+    "sensitivity": 0.9561,
+    "specificity": 0.9999
+   },
+   "tumor": {
+    "dice": 0.6586,
+    "hd95": 5.74,
+    "sensitivity": 0.5177,
+    "specificity": 1.0
+   },
+   "sex": "F",
+   "age_band": "<50",
+   "manufacturer": "TOSHIBA"
+  },
+  {
+   "patient_id": "KiTS-00064",
+   "kidney": {
+    "dice": 0.9477,
+    "hd95": 1.95,
+    "sensitivity": 0.9468,
+    "specificity": 0.9996
+   },
+   "tumor": {
+    "dice": 0.172,
+    "hd95": 81.15,
+    "sensitivity": 0.0961,
+    "specificity": 1.0
+   },
+   "sex": "F",
+   "age_band": "50-64",
+   "manufacturer": "GE MEDICAL SYSTEMS"
+  },
+  {
+   "patient_id": "KiTS-00202",
+   "kidney": {
+    "dice": 0.971,
+    "hd95": 1.41,
+    "sensitivity": 0.9639,
+    "specificity": 0.9999
+   },
+   "tumor": {
+    "dice": 0.8156,
+    "hd95": 9.43,
+    "sensitivity": 0.7054,
+    "specificity": 1.0
+   },
+   "sex": "F",
+   "age_band": "50-64",
+   "manufacturer": "GE MEDICAL SYSTEMS"
+  },
+  {
+   "patient_id": "KiTS-00168",
+   "kidney": {
+    "dice": 0.9444,
+    "hd95": 2.0,
+    "sensitivity": 0.937,
+    "specificity": 0.9998
+   },
+   "tumor": {
+    "dice": 0.8388,
+    "hd95": 5.2,
+    "sensitivity": 0.769,
+    "specificity": 1.0
+   },
+   "sex": "F",
+   "age_band": "50-64",
+   "manufacturer": "GE MEDICAL SYSTEMS"
+  },
+  {
+   "patient_id": "KiTS-00080",
+   "kidney": {
+    "dice": 0.9598,
+    "hd95": 1.41,
+    "sensitivity": 0.9656,
+    "specificity": 0.9997
+   },
+   "tumor": {
+    "dice": 0.8809,
+    "hd95": 3.16,
+    "sensitivity": 0.8181,
+    "specificity": 1.0
+   },
+   "sex": "M",
+   "age_band": "<50",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00003",
+   "kidney": {
+    "dice": 0.9792,
+    "hd95": 1.0,
+    "sensitivity": 0.9825,
+    "specificity": 0.9998
+   },
+   "tumor": {
+    "dice": 0.9117,
+    "hd95": 1.73,
+    "sensitivity": 0.8934,
+    "specificity": 1.0
+   },
+   "sex": "F",
+   "age_band": "<50",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00104",
+   "kidney": {
+    "dice": 0.9381,
+    "hd95": 4.0,
+    "sensitivity": 0.9624,
+    "specificity": 0.9997
+   },
+   "tumor": {
+    "dice": 0.7838,
+    "hd95": 9.0,
+    "sensitivity": 0.6611,
+    "specificity": 1.0
+   },
+   "sex": "M",
+   "age_band": ">=65",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00042",
+   "kidney": {
+    "dice": 0.9167,
+    "hd95": 4.12,
+    "sensitivity": 0.9797,
+    "specificity": 0.999
+   },
+   "tumor": {
+    "dice": 0.8835,
+    "hd95": 26.42,
+    "sensitivity": 0.7941,
+    "specificity": 0.9999
+   },
+   "sex": "F",
+   "age_band": "<50",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00013",
+   "kidney": {
+    "dice": 0.9509,
+    "hd95": 2.0,
+    "sensitivity": 0.9473,
+    "specificity": 0.9996
+   },
+   "tumor": {
+    "dice": 0.8725,
+    "hd95": 2.45,
+    "sensitivity": 0.8369,
+    "specificity": 0.9999
+   },
+   "sex": "F",
+   "age_band": ">=65",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00061",
+   "kidney": {
+    "dice": 0.9475,
+    "hd95": 2.83,
+    "sensitivity": 0.9382,
+    "specificity": 0.9993
+   },
+   "tumor": {
+    "dice": 0.8649,
+    "hd95": 51.46,
+    "sensitivity": 0.9152,
+    "specificity": 0.9994
+   },
+   "sex": "M",
+   "age_band": "<50",
+   "manufacturer": "GE MEDICAL SYSTEMS"
+  },
+  {
+   "patient_id": "KiTS-00073",
+   "kidney": {
+    "dice": 0.9319,
+    "hd95": 4.24,
+    "sensitivity": 0.9516,
+    "specificity": 0.9996
+   },
+   "tumor": {
+    "dice": 0.9148,
+    "hd95": 9.8,
+    "sensitivity": 0.8623,
+    "specificity": 0.9999
+   },
+   "sex": "M",
+   "age_band": "50-64",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00005",
+   "kidney": {
+    "dice": 0.8721,
+    "hd95": 13.16,
+    "sensitivity": 0.8181,
+    "specificity": 0.9998
+   },
+   "tumor": {
+    "dice": 0.6777,
+    "hd95": 55.95,
+    "sensitivity": 0.6814,
+    "specificity": 0.9998
+   },
+   "sex": "M",
+   "age_band": "<50",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00021",
+   "kidney": {
+    "dice": 0.9228,
+    "hd95": 4.58,
+    "sensitivity": 0.9501,
+    "specificity": 0.9988
+   },
+   "tumor": {
+    "dice": 0.1636,
+    "hd95": 97.15,
+    "sensitivity": 0.1004,
+    "specificity": 0.9999
+   },
+   "sex": "F",
+   "age_band": ">=65",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00209",
+   "kidney": {
+    "dice": 0.9651,
+    "hd95": 1.41,
+    "sensitivity": 0.9669,
+    "specificity": 0.9998
+   },
+   "tumor": {
+    "dice": 0.4462,
+    "hd95": 4.0,
+    "sensitivity": 0.2884,
+    "specificity": 1.0
+   },
+   "sex": "M",
+   "age_band": "<50",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00036",
+   "kidney": {
+    "dice": 0.9501,
+    "hd95": 3.0,
+    "sensitivity": 0.946,
+    "specificity": 0.9997
+   },
+   "tumor": {
+    "dice": 0.8343,
+    "hd95": 5.74,
+    "sensitivity": 0.8775,
+    "specificity": 0.9998
+   },
+   "sex": "M",
+   "age_band": "50-64",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00111",
+   "kidney": {
+    "dice": 0.9597,
+    "hd95": 1.41,
+    "sensitivity": 0.9462,
+    "specificity": 0.9998
+   },
+   "tumor": {
+    "dice": 0.8476,
+    "hd95": 3.16,
+    "sensitivity": 0.8695,
+    "specificity": 0.9999
+   },
+   "sex": "F",
+   "age_band": "50-64",
+   "manufacturer": "GE MEDICAL SYSTEMS"
+  },
+  {
+   "patient_id": "KiTS-00140",
+   "kidney": {
+    "dice": 0.9641,
+    "hd95": 3.0,
+    "sensitivity": 0.9485,
+    "specificity": 0.9998
+   },
+   "tumor": {
+    "dice": 0.2476,
+    "hd95": 86.37,
+    "sensitivity": 0.4407,
+    "specificity": 0.9998
+   },
+   "sex": "M",
+   "age_band": "50-64",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00152",
+   "kidney": {
+    "dice": 0.963,
+    "hd95": 1.41,
+    "sensitivity": 0.9636,
+    "specificity": 0.9994
+   },
+   "tumor": {
+    "dice": 0.8501,
+    "hd95": 2.24,
+    "sensitivity": 0.8594,
+    "specificity": 0.9999
+   },
+   "sex": "M",
+   "age_band": "50-64",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00015",
+   "kidney": {
+    "dice": 0.5852,
+    "hd95": 58.45,
+    "sensitivity": 0.4195,
+    "specificity": 0.9995
+   },
+   "tumor": {
+    "dice": 0.886,
+    "hd95": 34.1,
+    "sensitivity": 0.9246,
+    "specificity": 0.9999
+   },
+   "sex": "M",
+   "age_band": "50-64",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00045",
+   "kidney": {
+    "dice": 0.8842,
+    "hd95": 4.12,
+    "sensitivity": 0.8592,
+    "specificity": 0.9993
+   },
+   "tumor": {
+    "dice": 0.7044,
+    "hd95": 90.11,
+    "sensitivity": 0.7096,
+    "specificity": 0.9992
+   },
+   "sex": "F",
+   "age_band": "50-64",
+   "manufacturer": "TOSHIBA"
+  },
+  {
+   "patient_id": "KiTS-00182",
+   "kidney": {
+    "dice": 0.9455,
+    "hd95": 2.0,
+    "sensitivity": 0.9122,
+    "specificity": 0.9999
+   },
+   "tumor": {
+    "dice": 0.5959,
+    "hd95": 133.34,
+    "sensitivity": 0.6621,
+    "specificity": 1.0
+   },
+   "sex": "F",
+   "age_band": "50-64",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00002",
+   "kidney": {
+    "dice": 0.9635,
+    "hd95": 2.0,
+    "sensitivity": 0.9561,
+    "specificity": 0.9997
+   },
+   "tumor": {
+    "dice": 0.8765,
+    "hd95": 4.12,
+    "sensitivity": 0.9796,
+    "specificity": 0.9999
+   },
+   "sex": "M",
+   "age_band": ">=65",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00201",
+   "kidney": {
+    "dice": 0.9736,
+    "hd95": 1.0,
+    "sensitivity": 0.9751,
+    "specificity": 0.9995
+   },
+   "tumor": {
+    "dice": 0.6619,
+    "hd95": 5.0,
+    "sensitivity": 0.7148,
+    "specificity": 1.0
+   },
+   "sex": "M",
+   "age_band": "50-64",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00030",
+   "kidney": {
+    "dice": 0.7818,
+    "hd95": 37.07,
+    "sensitivity": 0.9271,
+    "specificity": 0.9964
+   },
+   "tumor": {
+    "dice": 0.9419,
+    "hd95": 5.74,
+    "sensitivity": 0.9059,
+    "specificity": 0.999
+   },
+   "sex": "F",
+   "age_band": "50-64",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00169",
+   "kidney": {
+    "dice": 0.9332,
+    "hd95": 2.83,
+    "sensitivity": 0.9349,
+    "specificity": 0.9997
+   },
+   "tumor": {
+    "dice": 0.6987,
+    "hd95": 12.08,
+    "sensitivity": 0.549,
+    "specificity": 1.0
+   },
+   "sex": "M",
+   "age_band": "50-64",
+   "manufacturer": "TOSHIBA"
+  },
+  {
+   "patient_id": "KiTS-00044",
+   "kidney": {
+    "dice": 0.8763,
+    "hd95": 11.07,
+    "sensitivity": 0.9558,
+    "specificity": 0.999
+   },
+   "tumor": {
+    "dice": 0.4401,
+    "hd95": 15.36,
+    "sensitivity": 0.2913,
+    "specificity": 1.0
+   },
+   "sex": "M",
+   "age_band": ">=65",
+   "manufacturer": "SIEMENS"
+  },
+  {
+   "patient_id": "KiTS-00047",
+   "kidney": {
+    "dice": 0.9058,
+    "hd95": 231.18,
+    "sensitivity": 0.9368,
+    "specificity": 0.9996
+   },
+   "tumor": {
+    "dice": 0.7462,
+    "hd95": 278.13,
+    "sensitivity": 0.7465,
+    "specificity": 0.9997
+   },
+   "sex": "M",
+   "age_band": ">=65",
+   "manufacturer": "SIEMENS"
+  }
+ ]
+}

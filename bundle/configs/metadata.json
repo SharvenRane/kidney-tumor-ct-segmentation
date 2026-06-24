@@ -1,0 +1,51 @@
+{
+  "schema": "https://github.com/Project-MONAI/MONAI-extra-test-data/releases/download/0.8.1/meta_schema_20220324.json",
+  "version": "0.1.0",
+  "changelog": {
+    "0.1.0": "Initial kidney and renal-mass CT segmentation bundle."
+  },
+  "monai_version": "1.5.2",
+  "pytorch_version": "2.11.0",
+  "numpy_version": "2.4.4",
+  "optional_packages_version": {
+    "nibabel": "5.2.1",
+    "pydicom": "3.0.2",
+    "highdicom": "0.27.0"
+  },
+  "task": "Kidney and renal-mass segmentation on contrast-enhanced abdominal CT",
+  "description": "3D SegResNet that segments kidney and renal mass on contrast CT. Trained on the C4KC-KiTS collection (TCIA) with clinician DICOM-SEG reference labels. Illustrative portfolio bundle, not a medical device.",
+  "authors": "Sharven Rane",
+  "copyright": "Copyright (c) 2026 Sharven Rane",
+  "data_source": "C4KC-KiTS, The Cancer Imaging Archive, doi:10.7937/TCIA.2019.IX49E8NX, CC BY 3.0",
+  "data_type": "dicom",
+  "image_classes": "single-channel contrast-enhanced abdominal CT, intensity windowed to [-200, 300] HU then scaled to [0, 1]",
+  "label_classes": "0 background, 1 kidney, 2 mass",
+  "intended_use": "Illustrative concurrent-read segmentation aid for research and portfolio demonstration only. Not for clinical use.",
+  "network_data_format": {
+    "inputs": {
+      "image": {
+        "type": "image",
+        "format": "magnitude",
+        "modality": "CT",
+        "num_channels": 1,
+        "spatial_shape": [96, 96, 96],
+        "dtype": "float32",
+        "value_range": [0, 1],
+        "is_patch_data": true,
+        "channel_def": {"0": "image"}
+      }
+    },
+    "outputs": {
+      "pred": {
+        "type": "image",
+        "format": "segmentation",
+        "num_channels": 3,
+        "spatial_shape": [96, 96, 96],
+        "dtype": "float32",
+        "value_range": [0, 1],
+        "is_patch_data": true,
+        "channel_def": {"0": "background", "1": "kidney", "2": "mass"}
+      }
+    }
+  }
+}
