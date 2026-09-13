@@ -13,3 +13,4 @@ bundle/eval/
 data/
 *.nii.gz
 *.dcm
+outputs/tensorrt/

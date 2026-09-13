@@ -86,7 +86,30 @@ comes from a real training run; nothing here is hand entered.
 | `docs/PCCP.md` | Illustrative Predetermined Change Control Plan following the FDA final guidance (Dec 2024): description of modifications, modification protocol, impact assessment. |
 | `docs/GMLP_MAPPING.md` | Each of the ten Good Machine Learning Practice principles mapped to what this project does. |
 | `src/monitor.py` | Working drift monitoring: embedding MMD and KS, output PSI and Jensen Shannon, Mahalanobis out of distribution detection. Its thresholds are the triggers in the PCCP modification protocol. |
+| `docs/TENSORRT_DEPLOYMENT.md` | TensorRT FP32 and FP16 engines evaluated at the validated Dice, with per volume latency. |
 | `bundle/` | MONAI Bundle: schema validated, version pinned, reproducible packaging of the model and its inference pipeline. |
+
+## TensorRT deployment
+
+The trained model is deployed with TensorRT and checked at the validated accuracy, not just
+timed. Same sliding window inference, same 32 held out volumes, scored per class and voxel by
+voxel against the validated configuration.
+
+| backend | seconds per CT volume | speedup | kidney Dice | tumor Dice |
+|---|---|---|---|---|
+| PyTorch FP32 | 3.142 | 1.00x | 0.9201 | 0.6687 |
+| PyTorch AMP (validated) | 1.344 | 2.34x | 0.9201 | 0.6687 |
+| TensorRT FP32 | 1.299 | 2.42x | 0.9201 | 0.6687 |
+| **TensorRT FP16** | **0.360** | **8.72x** | 0.9201 | 0.6688 |
+
+TensorRT FP16 is 3.7x faster than the mixed precision configuration that was validated, changes
+758 voxels across all 32 volumes, and moves no per case Dice by more than 0.0006. Engines are built
+with the TensorRT Python API directly and run on a dedicated CUDA stream. Method, engine build
+times and limits are in `docs/TENSORRT_DEPLOYMENT.md`.
+
+```
+python src/deploy_tensorrt.py --checkpoint outputs/best.pt
+```
 
 ## Explainability
 
@@ -104,10 +127,10 @@ network is a dense segmentation model rather than a classifier.
 ## Repository layout
 
 ```
-src/        ingestion, conversion, training, evaluation, explainability, monitoring
+src/        ingestion, conversion, training, evaluation, TensorRT deployment, explainability, monitoring
 bundle/     MONAI Bundle (configs/metadata.json, configs/inference.json, models/)
 docs/       validation report, model card, model facts, PCCP, GMLP mapping
-tests/      pytest suite for the data, transforms, and monitoring code
+tests/      pytest suite for the data, transforms, monitoring, and TensorRT engine parity
 ```
 
 ## Honest limitations

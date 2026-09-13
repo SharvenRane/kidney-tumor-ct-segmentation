@@ -11,3 +11,6 @@ mlflow
 tcia_utils
 jsonschema
 pytest
+# optional, for src/deploy_tensorrt.py (tests skip without them)
+# tensorrt-cu12==10.16.1.11
+# onnx
