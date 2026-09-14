@@ -15,10 +15,10 @@
     "n": 32
    },
    "hd95": {
-    "mean": 14.2059,
+    "mean": 21.3087,
     "ci95": [
-     4.0,
-     29.9191
+     6.0006,
+     44.8766
     ],
     "n": 32
    },
@@ -49,10 +49,10 @@
     "n": 32
    },
    "hd95": {
-    "mean": 37.3941,
+    "mean": 56.0916,
     "ci95": [
-     20.4134,
-     57.9997
+     30.6212,
+     87.0022
     ],
     "n": 32
    },
@@ -249,13 +249,13 @@
    "patient_id": "KiTS-00037",
    "kidney": {
     "dice": 0.7043,
-    "hd95": 43.39,
+    "hd95": 65.09,
     "sensitivity": 0.5539,
     "specificity": 0.9998
    },
    "tumor": {
     "dice": 0.0187,
-    "hd95": 54.92,
+    "hd95": 82.39,
     "sensitivity": 0.6858,
     "specificity": 0.9959
    },
@@ -267,13 +267,13 @@
    "patient_id": "KiTS-00205",
    "kidney": {
     "dice": 0.9415,
-    "hd95": 3.32,
+    "hd95": 4.97,
     "sensitivity": 0.9381,
     "specificity": 0.9998
    },
    "tumor": {
     "dice": 0.3183,
-    "hd95": 85.38,
+    "hd95": 128.08,
     "sensitivity": 0.2287,
     "specificity": 1.0
    },
@@ -285,13 +285,13 @@
    "patient_id": "KiTS-00100",
    "kidney": {
     "dice": 0.9731,
-    "hd95": 1.0,
+    "hd95": 1.5,
     "sensitivity": 0.9626,
     "specificity": 0.9999
    },
    "tumor": {
     "dice": 0.5446,
-    "hd95": 6.8,
+    "hd95": 10.19,
     "sensitivity": 0.5729,
     "specificity": 1.0
    },
@@ -303,13 +303,13 @@
    "patient_id": "KiTS-00085",
    "kidney": {
     "dice": 0.9598,
-    "hd95": 1.41,
+    "hd95": 2.12,
     "sensitivity": 0.9618,
     "specificity": 0.9998
    },
    "tumor": {
     "dice": 0.403,
-    "hd95": 8.06,
+    "hd95": 12.09,
     "sensitivity": 0.2577,
     "specificity": 1.0
    },
@@ -321,13 +321,13 @@
    "patient_id": "KiTS-00196",
    "kidney": {
     "dice": 0.9679,
-    "hd95": 1.41,
+    "hd95": 2.12,
     "sensitivity": 0.9697,
     "specificity": 0.9998
    },
    "tumor": {
     "dice": 0.8978,
-    "hd95": 3.32,
+    "hd95": 4.97,
     "sensitivity": 0.8475,
     "specificity": 1.0
    },
@@ -339,13 +339,13 @@
    "patient_id": "KiTS-00167",
    "kidney": {
     "dice": 0.9642,
-    "hd95": 1.41,
+    "hd95": 2.12,
     "sensitivity": 0.9561,
     "specificity": 0.9999
    },
    "tumor": {
     "dice": 0.6586,
-    "hd95": 5.74,
+    "hd95": 8.62,
     "sensitivity": 0.5177,
     "specificity": 1.0
    },
@@ -357,13 +357,13 @@
    "patient_id": "KiTS-00064",
    "kidney": {
     "dice": 0.9477,
-    "hd95": 1.95,
+    "hd95": 2.92,
     "sensitivity": 0.9468,
     "specificity": 0.9996
    },
    "tumor": {
     "dice": 0.172,
-    "hd95": 81.15,
+    "hd95": 121.73,
     "sensitivity": 0.0961,
     "specificity": 1.0
    },
@@ -375,13 +375,13 @@
    "patient_id": "KiTS-00202",
    "kidney": {
     "dice": 0.971,
-    "hd95": 1.41,
+    "hd95": 2.12,
     "sensitivity": 0.9639,
     "specificity": 0.9999
    },
    "tumor": {
     "dice": 0.8156,
-    "hd95": 9.43,
+    "hd95": 14.15,
     "sensitivity": 0.7054,
     "specificity": 1.0
    },
@@ -393,13 +393,13 @@
    "patient_id": "KiTS-00168",
    "kidney": {
     "dice": 0.9444,
-    "hd95": 2.0,
+    "hd95": 3.0,
     "sensitivity": 0.937,
     "specificity": 0.9998
    },
    "tumor": {
     "dice": 0.8388,
-    "hd95": 5.2,
+    "hd95": 7.79,
     "sensitivity": 0.769,
     "specificity": 1.0
    },
@@ -411,13 +411,13 @@
    "patient_id": "KiTS-00080",
    "kidney": {
     "dice": 0.9598,
-    "hd95": 1.41,
+    "hd95": 2.12,
     "sensitivity": 0.9656,
     "specificity": 0.9997
    },
    "tumor": {
     "dice": 0.8809,
-    "hd95": 3.16,
+    "hd95": 4.74,
     "sensitivity": 0.8181,
     "specificity": 1.0
    },
@@ -429,13 +429,13 @@
    "patient_id": "KiTS-00003",
    "kidney": {
     "dice": 0.9792,
-    "hd95": 1.0,
+    "hd95": 1.5,
     "sensitivity": 0.9825,
     "specificity": 0.9998
    },
    "tumor": {
     "dice": 0.9117,
-    "hd95": 1.73,
+    "hd95": 2.6,
     "sensitivity": 0.8934,
     "specificity": 1.0
    },
@@ -447,13 +447,13 @@
    "patient_id": "KiTS-00104",
    "kidney": {
     "dice": 0.9381,
-    "hd95": 4.0,
+    "hd95": 6.0,
     "sensitivity": 0.9624,
     "specificity": 0.9997
    },
    "tumor": {
     "dice": 0.7838,
-    "hd95": 9.0,
+    "hd95": 13.5,
     "sensitivity": 0.6611,
     "specificity": 1.0
    },
@@ -465,13 +465,13 @@
    "patient_id": "KiTS-00042",
    "kidney": {
     "dice": 0.9167,
-    "hd95": 4.12,
+    "hd95": 6.18,
     "sensitivity": 0.9797,
     "specificity": 0.999
    },
    "tumor": {
     "dice": 0.8835,
-    "hd95": 26.42,
+    "hd95": 39.63,
     "sensitivity": 0.7941,
     "specificity": 0.9999
    },
@@ -483,13 +483,13 @@
    "patient_id": "KiTS-00013",
    "kidney": {
     "dice": 0.9509,
-    "hd95": 2.0,
+    "hd95": 3.0,
     "sensitivity": 0.9473,
     "specificity": 0.9996
    },
    "tumor": {
     "dice": 0.8725,
-    "hd95": 2.45,
+    "hd95": 3.67,
     "sensitivity": 0.8369,
     "specificity": 0.9999
    },
@@ -501,13 +501,13 @@
    "patient_id": "KiTS-00061",
    "kidney": {
     "dice": 0.9475,
-    "hd95": 2.83,
+    "hd95": 4.24,
     "sensitivity": 0.9382,
     "specificity": 0.9993
    },
    "tumor": {
     "dice": 0.8649,
-    "hd95": 51.46,
+    "hd95": 77.19,
     "sensitivity": 0.9152,
     "specificity": 0.9994
    },
@@ -519,13 +519,13 @@
    "patient_id": "KiTS-00073",
    "kidney": {
     "dice": 0.9319,
-    "hd95": 4.24,
+    "hd95": 6.36,
     "sensitivity": 0.9516,
     "specificity": 0.9996
    },
    "tumor": {
     "dice": 0.9148,
-    "hd95": 9.8,
+    "hd95": 14.7,
     "sensitivity": 0.8623,
     "specificity": 0.9999
    },
@@ -537,13 +537,13 @@
    "patient_id": "KiTS-00005",
    "kidney": {
     "dice": 0.8721,
-    "hd95": 13.16,
+    "hd95": 19.74,
     "sensitivity": 0.8181,
     "specificity": 0.9998
    },
    "tumor": {
     "dice": 0.6777,
-    "hd95": 55.95,
+    "hd95": 83.92,
     "sensitivity": 0.6814,
     "specificity": 0.9998
    },
@@ -555,13 +555,13 @@
    "patient_id": "KiTS-00021",
    "kidney": {
     "dice": 0.9228,
-    "hd95": 4.58,
+    "hd95": 6.87,
     "sensitivity": 0.9501,
     "specificity": 0.9988
    },
    "tumor": {
     "dice": 0.1636,
-    "hd95": 97.15,
+    "hd95": 145.73,
     "sensitivity": 0.1004,
     "specificity": 0.9999
    },
@@ -573,13 +573,13 @@
    "patient_id": "KiTS-00209",
    "kidney": {
     "dice": 0.9651,
-    "hd95": 1.41,
+    "hd95": 2.12,
     "sensitivity": 0.9669,
     "specificity": 0.9998
    },
    "tumor": {
     "dice": 0.4462,
-    "hd95": 4.0,
+    "hd95": 6.0,
     "sensitivity": 0.2884,
     "specificity": 1.0
    },
@@ -591,13 +591,13 @@
    "patient_id": "KiTS-00036",
    "kidney": {
     "dice": 0.9501,
-    "hd95": 3.0,
+    "hd95": 4.5,
     "sensitivity": 0.946,
     "specificity": 0.9997
    },
    "tumor": {
     "dice": 0.8343,
-    "hd95": 5.74,
+    "hd95": 8.62,
     "sensitivity": 0.8775,
     "specificity": 0.9998
    },
@@ -609,13 +609,13 @@
    "patient_id": "KiTS-00111",
    "kidney": {
     "dice": 0.9597,
-    "hd95": 1.41,
+    "hd95": 2.12,
     "sensitivity": 0.9462,
     "specificity": 0.9998
    },
    "tumor": {
     "dice": 0.8476,
-    "hd95": 3.16,
+    "hd95": 4.74,
     "sensitivity": 0.8695,
     "specificity": 0.9999
    },
@@ -627,13 +627,13 @@
    "patient_id": "KiTS-00140",
    "kidney": {
     "dice": 0.9641,
-    "hd95": 3.0,
+    "hd95": 4.5,
     "sensitivity": 0.9485,
     "specificity": 0.9998
    },
    "tumor": {
     "dice": 0.2476,
-    "hd95": 86.37,
+    "hd95": 129.56,
     "sensitivity": 0.4407,
     "specificity": 0.9998
    },
@@ -645,13 +645,13 @@
    "patient_id": "KiTS-00152",
    "kidney": {
     "dice": 0.963,
-    "hd95": 1.41,
+    "hd95": 2.12,
     "sensitivity": 0.9636,
     "specificity": 0.9994
    },
    "tumor": {
     "dice": 0.8501,
-    "hd95": 2.24,
+    "hd95": 3.35,
     "sensitivity": 0.8594,
     "specificity": 0.9999
    },
@@ -663,13 +663,13 @@
    "patient_id": "KiTS-00015",
    "kidney": {
     "dice": 0.5852,
-    "hd95": 58.45,
+    "hd95": 87.67,
     "sensitivity": 0.4195,
     "specificity": 0.9995
    },
    "tumor": {
     "dice": 0.886,
-    "hd95": 34.1,
+    "hd95": 51.15,
     "sensitivity": 0.9246,
     "specificity": 0.9999
    },
@@ -681,13 +681,13 @@
    "patient_id": "KiTS-00045",
    "kidney": {
     "dice": 0.8842,
-    "hd95": 4.12,
+    "hd95": 6.18,
     "sensitivity": 0.8592,
     "specificity": 0.9993
    },
    "tumor": {
     "dice": 0.7044,
-    "hd95": 90.11,
+    "hd95": 135.16,
     "sensitivity": 0.7096,
     "specificity": 0.9992
    },
@@ -699,13 +699,13 @@
    "patient_id": "KiTS-00182",
    "kidney": {
     "dice": 0.9455,
-    "hd95": 2.0,
+    "hd95": 3.0,
     "sensitivity": 0.9122,
     "specificity": 0.9999
    },
    "tumor": {
     "dice": 0.5959,
-    "hd95": 133.34,
+    "hd95": 200.01,
     "sensitivity": 0.6621,
     "specificity": 1.0
    },
@@ -717,13 +717,13 @@
    "patient_id": "KiTS-00002",
    "kidney": {
     "dice": 0.9635,
-    "hd95": 2.0,
+    "hd95": 3.0,
     "sensitivity": 0.9561,
     "specificity": 0.9997
    },
    "tumor": {
     "dice": 0.8765,
-    "hd95": 4.12,
+    "hd95": 6.18,
     "sensitivity": 0.9796,
     "specificity": 0.9999
    },
@@ -735,13 +735,13 @@
    "patient_id": "KiTS-00201",
    "kidney": {
     "dice": 0.9736,
-    "hd95": 1.0,
+    "hd95": 1.5,
     "sensitivity": 0.9751,
     "specificity": 0.9995
    },
    "tumor": {
     "dice": 0.6619,
-    "hd95": 5.0,
+    "hd95": 7.5,
     "sensitivity": 0.7148,
     "specificity": 1.0
    },
@@ -753,13 +753,13 @@
    "patient_id": "KiTS-00030",
    "kidney": {
     "dice": 0.7818,
-    "hd95": 37.07,
+    "hd95": 55.6,
     "sensitivity": 0.9271,
     "specificity": 0.9964
    },
    "tumor": {
     "dice": 0.9419,
-    "hd95": 5.74,
+    "hd95": 8.62,
     "sensitivity": 0.9059,
     "specificity": 0.999
    },
@@ -771,13 +771,13 @@
    "patient_id": "KiTS-00169",
    "kidney": {
     "dice": 0.9332,
-    "hd95": 2.83,
+    "hd95": 4.24,
     "sensitivity": 0.9349,
     "specificity": 0.9997
    },
    "tumor": {
     "dice": 0.6987,
-    "hd95": 12.08,
+    "hd95": 18.12,
     "sensitivity": 0.549,
     "specificity": 1.0
    },
@@ -789,13 +789,13 @@
    "patient_id": "KiTS-00044",
    "kidney": {
     "dice": 0.8763,
-    "hd95": 11.07,
+    "hd95": 16.6,
     "sensitivity": 0.9558,
     "specificity": 0.999
    },
    "tumor": {
     "dice": 0.4401,
-    "hd95": 15.36,
+    "hd95": 23.04,
     "sensitivity": 0.2913,
     "specificity": 1.0
    },
@@ -807,13 +807,13 @@
    "patient_id": "KiTS-00047",
    "kidney": {
     "dice": 0.9058,
-    "hd95": 231.18,
+    "hd95": 346.76,
     "sensitivity": 0.9368,
     "specificity": 0.9996
    },
    "tumor": {
     "dice": 0.7462,
-    "hd95": 278.13,
+    "hd95": 417.19,
     "sensitivity": 0.7465,
     "specificity": 0.9997
    },

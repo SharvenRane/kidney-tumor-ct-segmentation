@@ -31,7 +31,7 @@ from monai.metrics import DiceMetric, HausdorffDistanceMetric
 from monai.networks.nets import SegResNet
 from monai.networks.utils import one_hot
 
-from data import build_datalist, val_transforms
+from data import PIXDIM, build_datalist, val_transforms
 
 ROI = (96, 96, 96)
 CLASSES = ["kidney", "tumor"]
@@ -201,7 +201,7 @@ def main():
             p, secs = run_backend(name, pred, x, args.sw_batch, stream)
             preds[name] = p
             d = dice_m(y_pred=one_hot(p, 3), y=y1h)[0].tolist()
-            h = hd_m(y_pred=one_hot(p, 3), y=y1h)[0].tolist()
+            h = hd_m(y_pred=one_hot(p, 3), y=y1h, spacing=PIXDIM)[0].tolist()  # millimetres, see evaluate.py
             for ci, c in enumerate(CLASSES):
                 rows[name]["dice"][c].append(float(d[ci]))
                 rows[name]["hd95"][c].append(float(h[ci]))

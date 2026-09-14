@@ -67,8 +67,16 @@ bootstrap 95% confidence interval:
 
 | Class | Dice | HD95 (mm) | Sensitivity | Specificity |
 |---|---|---|---|---|
-| Kidney | 0.920 (0.889 to 0.946) | 14.2 | 0.917 | 0.999 |
-| Tumor | 0.669 (0.577 to 0.755) | 37.4 | 0.658 | 1.000 |
+| Kidney | 0.920 (0.889 to 0.946) | 21.3 | 0.917 | 0.999 |
+| Tumor | 0.669 (0.577 to 0.755) | 56.1 | 0.658 | 1.000 |
+
+**Correction (September 2026).** Earlier versions of this README and of the validation report,
+model card, model facts and TensorRT page gave HD95 as 14.2 mm (kidney) and 37.4 mm (tumor). Those
+values were in 1.5 mm voxel units, not millimetres: `evaluate.py` and `deploy_tensorrt.py` called
+MONAI's `HausdorffDistanceMetric` without the voxel spacing. With `spacing` passed, every per case
+value is exactly 1.5 times larger, and the numbers above are in millimetres. Dice, sensitivity and
+specificity did not change. The error surfaced when VTK mesh distances in `docs/ITK_VTK.md`
+correlated perfectly with the old values but ran 1.5 times larger.
 
 Kidney segmentation lands in the published KiTS range; the tumor class is harder
 and lower, which the validation report and model card state plainly rather than
@@ -88,6 +96,7 @@ comes from a real training run; nothing here is hand entered.
 | `src/monitor.py` | Working drift monitoring: embedding MMD and KS, output PSI and Jensen Shannon, Mahalanobis out of distribution detection. Its thresholds are the triggers in the PCCP modification protocol. |
 | `docs/TENSORRT_DEPLOYMENT.md` | TensorRT FP32 and FP16 engines evaluated at the validated Dice, with per volume latency. |
 | `monailabel_app/` | MONAI Label app serving the model to annotation clients, with a REST driven evaluation. |
+| `docs/ITK_VTK.md` | Independent ITK ingestion and resampling checked voxel by voxel against the MONAI pipeline, and VTK surface meshes of reference and prediction. |
 | `bundle/` | MONAI Bundle: schema validated, version pinned, reproducible packaging of the model and its inference pipeline. |
 
 ## TensorRT deployment
@@ -98,13 +107,13 @@ voxel against the validated configuration.
 
 | backend | seconds per CT volume | speedup | kidney Dice | tumor Dice |
 |---|---|---|---|---|
-| PyTorch FP32 | 3.142 | 1.00x | 0.9201 | 0.6687 |
-| PyTorch AMP (validated) | 1.344 | 2.34x | 0.9201 | 0.6687 |
-| TensorRT FP32 | 1.299 | 2.42x | 0.9201 | 0.6687 |
-| **TensorRT FP16** | **0.360** | **8.72x** | 0.9201 | 0.6688 |
+| PyTorch FP32 | 3.251 | 1.00x | 0.9201 | 0.6687 |
+| PyTorch AMP (validated) | 1.397 | 2.33x | 0.9201 | 0.6687 |
+| TensorRT FP32 | 1.364 | 2.38x | 0.9201 | 0.6687 |
+| **TensorRT FP16** | **0.373** | **8.71x** | 0.9201 | 0.6687 |
 
 TensorRT FP16 is 3.7x faster than the mixed precision configuration that was validated, changes
-758 voxels across all 32 volumes, and moves no per case Dice by more than 0.0006. Engines are built
+768 voxels across all 32 volumes, and moves no per case Dice by more than 0.0012. Engines are built
 with the TensorRT Python API directly and run on a dedicated CUDA stream. Method, engine build
 times and limits are in `docs/TENSORRT_DEPLOYMENT.md`.
 
@@ -147,6 +156,40 @@ python monailabel_app/evaluate_server.py --server http://127.0.0.1:8765 --datase
 The app defines inference and two sample selection strategies. It does not define a training task,
 so corrected labels are stored but not used to retrain the model here.
 
+## ITK and VTK: second opinion on the data, 3D surfaces
+
+Training trusts one DICOM reader and one resampler, both from MONAI. `src/itk_dicom.py`,
+`src/itk_resample.py` and `src/vtk_surfaces.py` rebuild those steps with ITK, compare the two
+stacks voxel by voxel, and turn the labels into closed meshes with VTK. Full method and tables are in
+`docs/ITK_VTK.md`.
+
+| check | result |
+|---|---|
+| ITK DICOM read (GDCM series + highdicom SEG by referenced UID) vs the MONAI training cache | **210 of 210 cases identical**, 45,373 slices, including one scan rotated 4 degrees in plane |
+| injected ingestion bugs caught (left right label flip, reversed slices, half voxel origin shift) | 15 of 15 |
+| ITK resampling to 1.5 mm vs MONAI `Spacingd`, 32 test cases | HU identical; labels differ only at exact half voxel ties (ITK rounds up, torch rounds to even) |
+| clinician kidney label resampled to 1.5 mm and back, Dice with itself | 0.979 nearest, 0.988 ITK label Gaussian |
+| kidney Dice, 1.5 mm grid vs original grid after restoring the same predictions | 0.9201 vs 0.9283, most of the gap to the 0.930 MONAI Label number |
+| reference mesh volume vs voxel volume (VTK flying edges, smoothed) | kidney -0.05%, tumor -0.88% |
+| HD95 from VTK mesh distances vs MONAI voxel HD95, per case | within 2 mm in 32 of 32 kidney and 30 of 32 tumor cases; this check found the HD95 units bug above |
+
+![Reference and predicted surfaces for KiTS-00085](docs/figures/surface_KiTS-00085.png)
+
+Clinician reference on the left, model prediction on the right coloured by signed distance to the
+reference surface. The kidney fits within a millimetre or two; the small tumor is found at about a
+quarter of its reference volume. The worst tumor case is rendered and explained in `docs/ITK_VTK.md`.
+
+Two conventions had to be matched before ITK reproduced MONAI exactly: MONAI sizes the new grid over
+voxel centres, and it pads with the edge value where ITK returns 0. On one scan that padding
+difference alone was 2,048 HU on two faces of the volume.
+
+```
+python src/save_predictions.py --out <pred dir> --device cpu
+python src/itk_dicom.py --cases all
+python src/itk_resample.py --pred-dir <pred dir>
+python src/vtk_surfaces.py --pred-dir <pred dir>
+```
+
 ## Explainability
 
 `src/explain.py` produces two views per case: a prediction versus reference
@@ -163,10 +206,11 @@ network is a dense segmentation model rather than a classifier.
 ## Repository layout
 
 ```
-src/        ingestion, conversion, training, evaluation, TensorRT deployment, explainability, monitoring
+src/        ingestion, conversion, training, evaluation, TensorRT deployment, explainability, monitoring,
+            ITK ingestion and resampling checks, VTK surfaces
 bundle/     MONAI Bundle (configs/metadata.json, configs/inference.json, models/)
 docs/       validation report, model card, model facts, PCCP, GMLP mapping
-tests/      pytest suite for the data, transforms, monitoring, and TensorRT engine parity
+tests/      pytest suite for the data, transforms, monitoring, TensorRT engine parity, ITK and VTK
 ```
 
 ## Honest limitations

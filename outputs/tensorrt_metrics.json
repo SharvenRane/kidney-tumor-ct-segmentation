@@ -12,11 +12,11 @@
  "overlap": 0.5,
  "engines": {
   "fp32": {
-   "build_seconds": 23.6,
-   "plan_mb": 20.6
+   "build_seconds": 24.2,
+   "plan_mb": 20.8
   },
   "fp16": {
-   "build_seconds": 19.4,
+   "build_seconds": 18.0,
    "plan_mb": 10.2
   }
  },
@@ -42,24 +42,24 @@
    },
    "hd95_mm": {
     "kidney": {
-     "mean": 14.2105,
+     "mean": 21.3157,
      "ci95": [
-      4.1206,
-      30.6485
+      6.1809,
+      45.9727
      ],
      "n": 32
     },
     "tumor": {
-     "mean": 37.3941,
+     "mean": 56.0912,
      "ci95": [
-      20.2927,
-      59.2906
+      30.439,
+      88.9359
      ],
      "n": 32
     }
    },
-   "median_seconds_per_volume": 3.142,
-   "total_seconds": 97.0,
+   "median_seconds_per_volume": 3.251,
+   "total_seconds": 100.6,
    "speedup_vs_torch_fp32": 1.0,
    "min_voxel_agreement_vs_torch_amp": 0.999995,
    "total_voxels_changed_vs_torch_amp": 459,
@@ -89,25 +89,25 @@
    },
    "hd95_mm": {
     "kidney": {
-     "mean": 14.2015,
+     "mean": 21.3022,
      "ci95": [
-      4.1159,
-      30.6348
+      6.1738,
+      45.9523
      ],
      "n": 32
     },
     "tumor": {
-     "mean": 37.3962,
+     "mean": 56.0944,
      "ci95": [
-      20.2927,
-      59.2947
+      30.4391,
+      88.9421
      ],
      "n": 32
     }
    },
-   "median_seconds_per_volume": 1.344,
-   "total_seconds": 41.5,
-   "speedup_vs_torch_fp32": 2.34,
+   "median_seconds_per_volume": 1.397,
+   "total_seconds": 43.1,
+   "speedup_vs_torch_fp32": 2.33,
    "min_voxel_agreement_vs_torch_amp": 1.0,
    "total_voxels_changed_vs_torch_amp": 0,
    "max_abs_dice_delta_vs_torch_amp": {
@@ -136,25 +136,25 @@
    },
    "hd95_mm": {
     "kidney": {
-     "mean": 14.2105,
+     "mean": 21.3157,
      "ci95": [
-      4.1206,
-      30.6485
+      6.1809,
+      45.9727
      ],
      "n": 32
     },
     "tumor": {
-     "mean": 37.3941,
+     "mean": 56.0912,
      "ci95": [
-      20.2927,
-      59.2906
+      30.439,
+      88.9359
      ],
      "n": 32
     }
    },
-   "median_seconds_per_volume": 1.299,
-   "total_seconds": 40.0,
-   "speedup_vs_torch_fp32": 2.42,
+   "median_seconds_per_volume": 1.364,
+   "total_seconds": 42.2,
+   "speedup_vs_torch_fp32": 2.38,
    "min_voxel_agreement_vs_torch_amp": 0.999995,
    "total_voxels_changed_vs_torch_amp": 459,
    "max_abs_dice_delta_vs_torch_amp": {
@@ -173,9 +173,9 @@
      "n": 32
     },
     "tumor": {
-     "mean": 0.6688,
+     "mean": 0.6687,
      "ci95": [
-      0.5738,
+      0.5737,
       0.7534
      ],
      "n": 32
@@ -183,30 +183,30 @@
    },
    "hd95_mm": {
     "kidney": {
-     "mean": 14.2054,
+     "mean": 21.3065,
      "ci95": [
-      4.1201,
-      30.636
+      6.1802,
+      45.9492
      ],
      "n": 32
     },
     "tumor": {
-     "mean": 37.392,
+     "mean": 56.089,
      "ci95": [
-      20.2921,
-      59.2906
+      30.4393,
+      88.9366
      ],
      "n": 32
     }
    },
-   "median_seconds_per_volume": 0.36,
-   "total_seconds": 11.1,
-   "speedup_vs_torch_fp32": 8.72,
+   "median_seconds_per_volume": 0.373,
+   "total_seconds": 11.6,
+   "speedup_vs_torch_fp32": 8.71,
    "min_voxel_agreement_vs_torch_amp": 0.999992,
-   "total_voxels_changed_vs_torch_amp": 758,
+   "total_voxels_changed_vs_torch_amp": 768,
    "max_abs_dice_delta_vs_torch_amp": {
     "kidney": 0.0001,
-    "tumor": 0.0006
+    "tumor": 0.0012
    }
   }
  }

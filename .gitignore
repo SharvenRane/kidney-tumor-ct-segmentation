@@ -19,3 +19,7 @@ outputs/tensorrt/
 monailabel_app/logs/
 monailabel_app/bin/
 monailabel_app/model/
+
+# VTK meshes written by src/vtk_surfaces.py (derived from patient data)
+outputs/surfaces/
+outputs/_itk_nifti_tmp/

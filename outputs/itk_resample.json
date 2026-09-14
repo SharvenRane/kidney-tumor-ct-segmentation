@@ -1,0 +1,1863 @@
+{
+ "output_spacing_mm": 1.5,
+ "label_gaussian": {
+  "sigma_mm": 0.75,
+  "alpha": 3.0
+ },
+ "n_cases": 32,
+ "grid_identical_cases": 32,
+ "hu_abs_diff_itk_vs_monai_max": 0.0,
+ "hu_abs_diff_itk_vs_monai_mean_of_means": 0.0,
+ "label_voxels_disagree_itk_nearest_vs_monai_total": 54127,
+ "label_voxels_disagree_not_at_half_voxel_ties_total": 0,
+ "cases_with_label_disagreement": 21,
+ "kidney": {
+  "cases_with_structure": 32,
+  "monai_nearest_volume_error_pct": {
+   "mean_abs": 0.223,
+   "max_abs": 0.927,
+   "mean_signed": 0.067
+  },
+  "itk_nearest_volume_error_pct": {
+   "mean_abs": 0.148,
+   "max_abs": 0.765,
+   "mean_signed": 0.042
+  },
+  "itk_label_gaussian_volume_error_pct": {
+   "mean_abs": 0.113,
+   "max_abs": 0.26,
+   "mean_signed": -0.074
+  },
+  "monai_nearest_roundtrip_dice": {
+   "mean": 0.9793,
+   "min": 0.9705
+  },
+  "itk_nearest_roundtrip_dice": {
+   "mean": 0.9793,
+   "min": 0.9704
+  },
+  "itk_label_gaussian_roundtrip_dice": {
+   "mean": 0.9883,
+   "min": 0.9845
+  },
+  "dice_1p5mm_grid": {
+   "mean": 0.9201,
+   "min": 0.5852
+  },
+  "dice_original_grid_pred_restored_nearest": {
+   "mean": 0.9229,
+   "min": 0.5872
+  },
+  "dice_original_grid_pred_restored_label_gaussian": {
+   "mean": 0.9283,
+   "min": 0.5901
+  }
+ },
+ "tumor": {
+  "cases_with_structure": 32,
+  "monai_nearest_volume_error_pct": {
+   "mean_abs": 1.236,
+   "max_abs": 4.667,
+   "mean_signed": 0.341
+  },
+  "itk_nearest_volume_error_pct": {
+   "mean_abs": 0.856,
+   "max_abs": 4.347,
+   "mean_signed": 0.018
+  },
+  "itk_label_gaussian_volume_error_pct": {
+   "mean_abs": 0.751,
+   "max_abs": 3.498,
+   "mean_signed": -0.529
+  },
+  "monai_nearest_roundtrip_dice": {
+   "mean": 0.967,
+   "min": 0.9161
+  },
+  "itk_nearest_roundtrip_dice": {
+   "mean": 0.967,
+   "min": 0.9177
+  },
+  "itk_label_gaussian_roundtrip_dice": {
+   "mean": 0.9806,
+   "min": 0.9535
+  },
+  "dice_1p5mm_grid": {
+   "mean": 0.6687,
+   "min": 0.0187
+  },
+  "dice_original_grid_pred_restored_nearest": {
+   "mean": 0.6723,
+   "min": 0.0185
+  },
+  "dice_original_grid_pred_restored_label_gaussian": {
+   "mean": 0.6752,
+   "min": 0.0191
+  }
+ },
+ "median_seconds_itk_linear_plus_nearest": 0.06,
+ "median_seconds_itk_label_gaussian": 1.92,
+ "median_seconds_monai_load_orientation_spacingd": 1.8849999999999998,
+ "cases": [
+  {
+   "patient_id": "KiTS-00037",
+   "original_spacing_mm": [
+    0.9375,
+    0.9375,
+    5.0
+   ],
+   "iso_size": [
+    320,
+    320,
+    301
+   ],
+   "seconds_itk_linear_plus_nearest": 0.94,
+   "seconds_itk_label_gaussian": 2.28,
+   "seconds_monai_load_orientation_spacingd": 1.88,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 0,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 1022.682,
+    "monai_nearest_ml": 1021.791,
+    "monai_nearest_volume_error_pct": -0.087,
+    "itk_nearest_ml": 1021.791,
+    "itk_nearest_volume_error_pct": -0.087,
+    "itk_label_gaussian_ml": 1022.058,
+    "itk_label_gaussian_volume_error_pct": -0.061,
+    "monai_nearest_roundtrip_dice": 0.9854,
+    "itk_nearest_roundtrip_dice": 0.9854,
+    "itk_label_gaussian_roundtrip_dice": 0.9918,
+    "dice_1p5mm_grid": 0.7043,
+    "dice_original_grid_pred_restored_nearest": 0.7104,
+    "dice_original_grid_pred_restored_label_gaussian": 0.7135
+   },
+   "tumor": {
+    "original_ml": 5.972,
+    "monai_nearest_ml": 5.94,
+    "monai_nearest_volume_error_pct": -0.539,
+    "itk_nearest_ml": 5.94,
+    "itk_nearest_volume_error_pct": -0.539,
+    "itk_label_gaussian_ml": 5.869,
+    "itk_label_gaussian_volume_error_pct": -1.725,
+    "monai_nearest_roundtrip_dice": 0.9546,
+    "itk_nearest_roundtrip_dice": 0.9546,
+    "itk_label_gaussian_roundtrip_dice": 0.9757,
+    "dice_1p5mm_grid": 0.0187,
+    "dice_original_grid_pred_restored_nearest": 0.0185,
+    "dice_original_grid_pred_restored_label_gaussian": 0.0191
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00205",
+   "original_spacing_mm": [
+    0.7812,
+    0.7812,
+    5.0
+   ],
+   "iso_size": [
+    267,
+    267,
+    308
+   ],
+   "seconds_itk_linear_plus_nearest": 0.06,
+   "seconds_itk_label_gaussian": 1.84,
+   "seconds_monai_load_orientation_spacingd": 1.47,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 0,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 318.066,
+    "monai_nearest_ml": 316.737,
+    "monai_nearest_volume_error_pct": -0.418,
+    "itk_nearest_ml": 316.737,
+    "itk_nearest_volume_error_pct": -0.418,
+    "itk_label_gaussian_ml": 317.399,
+    "itk_label_gaussian_volume_error_pct": -0.21,
+    "monai_nearest_roundtrip_dice": 0.9781,
+    "itk_nearest_roundtrip_dice": 0.9781,
+    "itk_label_gaussian_roundtrip_dice": 0.9864,
+    "dice_1p5mm_grid": 0.9415,
+    "dice_original_grid_pred_restored_nearest": 0.9462,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9515
+   },
+   "tumor": {
+    "original_ml": 13.019,
+    "monai_nearest_ml": 12.896,
+    "monai_nearest_volume_error_pct": -0.944,
+    "itk_nearest_ml": 12.896,
+    "itk_nearest_volume_error_pct": -0.944,
+    "itk_label_gaussian_ml": 12.919,
+    "itk_label_gaussian_volume_error_pct": -0.763,
+    "monai_nearest_roundtrip_dice": 0.9597,
+    "itk_nearest_roundtrip_dice": 0.9597,
+    "itk_label_gaussian_roundtrip_dice": 0.9726,
+    "dice_1p5mm_grid": 0.3183,
+    "dice_original_grid_pred_restored_nearest": 0.3155,
+    "dice_original_grid_pred_restored_label_gaussian": 0.3224
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00100",
+   "original_spacing_mm": [
+    0.8242,
+    0.8242,
+    1.0
+   ],
+   "iso_size": [
+    282,
+    282,
+    314
+   ],
+   "seconds_itk_linear_plus_nearest": 0.12,
+   "seconds_itk_label_gaussian": 3.27,
+   "seconds_monai_load_orientation_spacingd": 5.76,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 799,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 308.365,
+    "monai_nearest_ml": 308.421,
+    "monai_nearest_volume_error_pct": 0.018,
+    "itk_nearest_ml": 308.094,
+    "itk_nearest_volume_error_pct": -0.088,
+    "itk_label_gaussian_ml": 308.657,
+    "itk_label_gaussian_volume_error_pct": 0.095,
+    "monai_nearest_roundtrip_dice": 0.9739,
+    "itk_nearest_roundtrip_dice": 0.9739,
+    "itk_label_gaussian_roundtrip_dice": 0.9869,
+    "dice_1p5mm_grid": 0.9731,
+    "dice_original_grid_pred_restored_nearest": 0.9677,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9758
+   },
+   "tumor": {
+    "original_ml": 2.686,
+    "monai_nearest_ml": 2.663,
+    "monai_nearest_volume_error_pct": -0.865,
+    "itk_nearest_ml": 2.656,
+    "itk_nearest_volume_error_pct": -1.116,
+    "itk_label_gaussian_ml": 2.612,
+    "itk_label_gaussian_volume_error_pct": -2.749,
+    "monai_nearest_roundtrip_dice": 0.9161,
+    "itk_nearest_roundtrip_dice": 0.9177,
+    "itk_label_gaussian_roundtrip_dice": 0.9542,
+    "dice_1p5mm_grid": 0.5446,
+    "dice_original_grid_pred_restored_nearest": 0.5419,
+    "dice_original_grid_pred_restored_label_gaussian": 0.5455
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00085",
+   "original_spacing_mm": [
+    0.812,
+    0.812,
+    5.0
+   ],
+   "iso_size": [
+    278,
+    278,
+    288
+   ],
+   "seconds_itk_linear_plus_nearest": 0.06,
+   "seconds_itk_label_gaussian": 1.86,
+   "seconds_monai_load_orientation_spacingd": 1.57,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 976,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 415.308,
+    "monai_nearest_ml": 414.879,
+    "monai_nearest_volume_error_pct": -0.103,
+    "itk_nearest_ml": 415.898,
+    "itk_nearest_volume_error_pct": 0.142,
+    "itk_label_gaussian_ml": 415.243,
+    "itk_label_gaussian_volume_error_pct": -0.016,
+    "monai_nearest_roundtrip_dice": 0.9795,
+    "itk_nearest_roundtrip_dice": 0.9795,
+    "itk_label_gaussian_roundtrip_dice": 0.9878,
+    "dice_1p5mm_grid": 0.9598,
+    "dice_original_grid_pred_restored_nearest": 0.9654,
+    "dice_original_grid_pred_restored_label_gaussian": 0.972
+   },
+   "tumor": {
+    "original_ml": 8.014,
+    "monai_nearest_ml": 8.029,
+    "monai_nearest_volume_error_pct": 0.185,
+    "itk_nearest_ml": 8.181,
+    "itk_nearest_volume_error_pct": 2.08,
+    "itk_label_gaussian_ml": 8.073,
+    "itk_label_gaussian_volume_error_pct": 0.732,
+    "monai_nearest_roundtrip_dice": 0.9614,
+    "itk_nearest_roundtrip_dice": 0.9614,
+    "itk_label_gaussian_roundtrip_dice": 0.9747,
+    "dice_1p5mm_grid": 0.403,
+    "dice_original_grid_pred_restored_nearest": 0.4335,
+    "dice_original_grid_pred_restored_label_gaussian": 0.4188
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00196",
+   "original_spacing_mm": [
+    0.8184,
+    0.8184,
+    3.0
+   ],
+   "iso_size": [
+    280,
+    280,
+    355
+   ],
+   "seconds_itk_linear_plus_nearest": 0.07,
+   "seconds_itk_label_gaussian": 2.48,
+   "seconds_monai_load_orientation_spacingd": 2.34,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 5848,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 453.864,
+    "monai_nearest_ml": 454.353,
+    "monai_nearest_volume_error_pct": 0.108,
+    "itk_nearest_ml": 453.776,
+    "itk_nearest_volume_error_pct": -0.019,
+    "itk_label_gaussian_ml": 452.82,
+    "itk_label_gaussian_volume_error_pct": -0.23,
+    "monai_nearest_roundtrip_dice": 0.9826,
+    "itk_nearest_roundtrip_dice": 0.9826,
+    "itk_label_gaussian_roundtrip_dice": 0.9911,
+    "dice_1p5mm_grid": 0.9679,
+    "dice_original_grid_pred_restored_nearest": 0.9707,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9755
+   },
+   "tumor": {
+    "original_ml": 43.516,
+    "monai_nearest_ml": 44.132,
+    "monai_nearest_volume_error_pct": 1.415,
+    "itk_nearest_ml": 43.625,
+    "itk_nearest_volume_error_pct": 0.251,
+    "itk_label_gaussian_ml": 43.153,
+    "itk_label_gaussian_volume_error_pct": -0.834,
+    "monai_nearest_roundtrip_dice": 0.9761,
+    "itk_nearest_roundtrip_dice": 0.9761,
+    "itk_label_gaussian_roundtrip_dice": 0.9866,
+    "dice_1p5mm_grid": 0.8978,
+    "dice_original_grid_pred_restored_nearest": 0.9044,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9051
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00167",
+   "original_spacing_mm": [
+    0.873,
+    0.873,
+    5.0
+   ],
+   "iso_size": [
+    298,
+    298,
+    341
+   ],
+   "seconds_itk_linear_plus_nearest": 0.06,
+   "seconds_itk_label_gaussian": 2.37,
+   "seconds_monai_load_orientation_spacingd": 2.15,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 1868,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 490.609,
+    "monai_nearest_ml": 490.485,
+    "monai_nearest_volume_error_pct": -0.025,
+    "itk_nearest_ml": 490.941,
+    "itk_nearest_volume_error_pct": 0.068,
+    "itk_label_gaussian_ml": 489.824,
+    "itk_label_gaussian_volume_error_pct": -0.16,
+    "monai_nearest_roundtrip_dice": 0.9828,
+    "itk_nearest_roundtrip_dice": 0.9828,
+    "itk_label_gaussian_roundtrip_dice": 0.9897,
+    "dice_1p5mm_grid": 0.9642,
+    "dice_original_grid_pred_restored_nearest": 0.9689,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9732
+   },
+   "tumor": {
+    "original_ml": 7.743,
+    "monai_nearest_ml": 7.628,
+    "monai_nearest_volume_error_pct": -1.495,
+    "itk_nearest_ml": 7.628,
+    "itk_nearest_volume_error_pct": -1.495,
+    "itk_label_gaussian_ml": 7.779,
+    "itk_label_gaussian_volume_error_pct": 0.467,
+    "monai_nearest_roundtrip_dice": 0.9606,
+    "itk_nearest_roundtrip_dice": 0.9606,
+    "itk_label_gaussian_roundtrip_dice": 0.9724,
+    "dice_1p5mm_grid": 0.659,
+    "dice_original_grid_pred_restored_nearest": 0.6943,
+    "dice_original_grid_pred_restored_label_gaussian": 0.692
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00064",
+   "original_spacing_mm": [
+    0.7031,
+    0.7031,
+    5.0
+   ],
+   "iso_size": [
+    241,
+    241,
+    174
+   ],
+   "seconds_itk_linear_plus_nearest": 0.03,
+   "seconds_itk_label_gaussian": 0.9,
+   "seconds_monai_load_orientation_spacingd": 0.98,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 0,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 293.123,
+    "monai_nearest_ml": 293.797,
+    "monai_nearest_volume_error_pct": 0.23,
+    "itk_nearest_ml": 293.797,
+    "itk_nearest_volume_error_pct": 0.23,
+    "itk_label_gaussian_ml": 293.061,
+    "itk_label_gaussian_volume_error_pct": -0.021,
+    "monai_nearest_roundtrip_dice": 0.9776,
+    "itk_nearest_roundtrip_dice": 0.9776,
+    "itk_label_gaussian_roundtrip_dice": 0.9863,
+    "dice_1p5mm_grid": 0.9477,
+    "dice_original_grid_pred_restored_nearest": 0.9517,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9576
+   },
+   "tumor": {
+    "original_ml": 9.912,
+    "monai_nearest_ml": 9.902,
+    "monai_nearest_volume_error_pct": -0.103,
+    "itk_nearest_ml": 9.902,
+    "itk_nearest_volume_error_pct": -0.103,
+    "itk_label_gaussian_ml": 10.064,
+    "itk_label_gaussian_volume_error_pct": 1.532,
+    "monai_nearest_roundtrip_dice": 0.9684,
+    "itk_nearest_roundtrip_dice": 0.9684,
+    "itk_label_gaussian_roundtrip_dice": 0.9798,
+    "dice_1p5mm_grid": 0.1725,
+    "dice_original_grid_pred_restored_nearest": 0.1848,
+    "dice_original_grid_pred_restored_label_gaussian": 0.1727
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00202",
+   "original_spacing_mm": [
+    0.8984,
+    0.8984,
+    1.25
+   ],
+   "iso_size": [
+    307,
+    307,
+    319
+   ],
+   "seconds_itk_linear_plus_nearest": 0.11,
+   "seconds_itk_label_gaussian": 3.17,
+   "seconds_monai_load_orientation_spacingd": 4.55,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 0,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 366.407,
+    "monai_nearest_ml": 367.622,
+    "monai_nearest_volume_error_pct": 0.332,
+    "itk_nearest_ml": 367.622,
+    "itk_nearest_volume_error_pct": 0.332,
+    "itk_label_gaussian_ml": 366.265,
+    "itk_label_gaussian_volume_error_pct": -0.039,
+    "monai_nearest_roundtrip_dice": 0.9781,
+    "itk_nearest_roundtrip_dice": 0.9781,
+    "itk_label_gaussian_roundtrip_dice": 0.989,
+    "dice_1p5mm_grid": 0.971,
+    "dice_original_grid_pred_restored_nearest": 0.967,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9737
+   },
+   "tumor": {
+    "original_ml": 116.586,
+    "monai_nearest_ml": 117.109,
+    "monai_nearest_volume_error_pct": 0.449,
+    "itk_nearest_ml": 117.109,
+    "itk_nearest_volume_error_pct": 0.449,
+    "itk_label_gaussian_ml": 116.478,
+    "itk_label_gaussian_volume_error_pct": -0.092,
+    "monai_nearest_roundtrip_dice": 0.9788,
+    "itk_nearest_roundtrip_dice": 0.9788,
+    "itk_label_gaussian_roundtrip_dice": 0.9885,
+    "dice_1p5mm_grid": 0.8155,
+    "dice_original_grid_pred_restored_nearest": 0.8138,
+    "dice_original_grid_pred_restored_label_gaussian": 0.8155
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00168",
+   "original_spacing_mm": [
+    0.7754,
+    0.7754,
+    5.0
+   ],
+   "iso_size": [
+    265,
+    265,
+    274
+   ],
+   "seconds_itk_linear_plus_nearest": 0.05,
+   "seconds_itk_label_gaussian": 1.62,
+   "seconds_monai_load_orientation_spacingd": 1.43,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 0,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 257.111,
+    "monai_nearest_ml": 257.188,
+    "monai_nearest_volume_error_pct": 0.03,
+    "itk_nearest_ml": 257.188,
+    "itk_nearest_volume_error_pct": 0.03,
+    "itk_label_gaussian_ml": 256.702,
+    "itk_label_gaussian_volume_error_pct": -0.159,
+    "monai_nearest_roundtrip_dice": 0.977,
+    "itk_nearest_roundtrip_dice": 0.977,
+    "itk_label_gaussian_roundtrip_dice": 0.9863,
+    "dice_1p5mm_grid": 0.9444,
+    "dice_original_grid_pred_restored_nearest": 0.9491,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9536
+   },
+   "tumor": {
+    "original_ml": 33.789,
+    "monai_nearest_ml": 33.682,
+    "monai_nearest_volume_error_pct": -0.316,
+    "itk_nearest_ml": 33.682,
+    "itk_nearest_volume_error_pct": -0.316,
+    "itk_label_gaussian_ml": 33.524,
+    "itk_label_gaussian_volume_error_pct": -0.785,
+    "monai_nearest_roundtrip_dice": 0.9741,
+    "itk_nearest_roundtrip_dice": 0.9741,
+    "itk_label_gaussian_roundtrip_dice": 0.9842,
+    "dice_1p5mm_grid": 0.8387,
+    "dice_original_grid_pred_restored_nearest": 0.8436,
+    "dice_original_grid_pred_restored_label_gaussian": 0.8495
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00080",
+   "original_spacing_mm": [
+    0.7227,
+    0.7227,
+    5.0
+   ],
+   "iso_size": [
+    247,
+    247,
+    291
+   ],
+   "seconds_itk_linear_plus_nearest": 0.05,
+   "seconds_itk_label_gaussian": 1.61,
+   "seconds_monai_load_orientation_spacingd": 1.33,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 0,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 406.735,
+    "monai_nearest_ml": 406.299,
+    "monai_nearest_volume_error_pct": -0.107,
+    "itk_nearest_ml": 406.299,
+    "itk_nearest_volume_error_pct": -0.107,
+    "itk_label_gaussian_ml": 406.067,
+    "itk_label_gaussian_volume_error_pct": -0.164,
+    "monai_nearest_roundtrip_dice": 0.9776,
+    "itk_nearest_roundtrip_dice": 0.9776,
+    "itk_label_gaussian_roundtrip_dice": 0.9865,
+    "dice_1p5mm_grid": 0.9599,
+    "dice_original_grid_pred_restored_nearest": 0.965,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9722
+   },
+   "tumor": {
+    "original_ml": 40.925,
+    "monai_nearest_ml": 40.473,
+    "monai_nearest_volume_error_pct": -1.104,
+    "itk_nearest_ml": 40.473,
+    "itk_nearest_volume_error_pct": -1.104,
+    "itk_label_gaussian_ml": 40.854,
+    "itk_label_gaussian_volume_error_pct": -0.172,
+    "monai_nearest_roundtrip_dice": 0.9753,
+    "itk_nearest_roundtrip_dice": 0.9753,
+    "itk_label_gaussian_roundtrip_dice": 0.9862,
+    "dice_1p5mm_grid": 0.881,
+    "dice_original_grid_pred_restored_nearest": 0.8781,
+    "dice_original_grid_pred_restored_label_gaussian": 0.884
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00003",
+   "original_spacing_mm": [
+    0.8555,
+    0.8555,
+    1.0
+   ],
+   "iso_size": [
+    292,
+    292,
+    180
+   ],
+   "seconds_itk_linear_plus_nearest": 0.11,
+   "seconds_itk_label_gaussian": 1.9,
+   "seconds_monai_load_orientation_spacingd": 3.17,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 1867,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 393.211,
+    "monai_nearest_ml": 393.815,
+    "monai_nearest_volume_error_pct": 0.154,
+    "itk_nearest_ml": 393.957,
+    "itk_nearest_volume_error_pct": 0.19,
+    "itk_label_gaussian_ml": 392.722,
+    "itk_label_gaussian_volume_error_pct": -0.124,
+    "monai_nearest_roundtrip_dice": 0.9774,
+    "itk_nearest_roundtrip_dice": 0.9774,
+    "itk_label_gaussian_roundtrip_dice": 0.9894,
+    "dice_1p5mm_grid": 0.9792,
+    "dice_original_grid_pred_restored_nearest": 0.9745,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9814
+   },
+   "tumor": {
+    "original_ml": 10.225,
+    "monai_nearest_ml": 10.196,
+    "monai_nearest_volume_error_pct": -0.286,
+    "itk_nearest_ml": 10.29,
+    "itk_nearest_volume_error_pct": 0.639,
+    "itk_label_gaussian_ml": 10.145,
+    "itk_label_gaussian_volume_error_pct": -0.781,
+    "monai_nearest_roundtrip_dice": 0.9492,
+    "itk_nearest_roundtrip_dice": 0.9496,
+    "itk_label_gaussian_roundtrip_dice": 0.9748,
+    "dice_1p5mm_grid": 0.9117,
+    "dice_original_grid_pred_restored_nearest": 0.8982,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9095
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00104",
+   "original_spacing_mm": [
+    0.7812,
+    0.7812,
+    5.0
+   ],
+   "iso_size": [
+    267,
+    267,
+    378
+   ],
+   "seconds_itk_linear_plus_nearest": 0.07,
+   "seconds_itk_label_gaussian": 2.27,
+   "seconds_monai_load_orientation_spacingd": 1.87,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 1163,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 352.435,
+    "monai_nearest_ml": 352.046,
+    "monai_nearest_volume_error_pct": -0.11,
+    "itk_nearest_ml": 351.763,
+    "itk_nearest_volume_error_pct": -0.191,
+    "itk_label_gaussian_ml": 352.279,
+    "itk_label_gaussian_volume_error_pct": -0.044,
+    "monai_nearest_roundtrip_dice": 0.9795,
+    "itk_nearest_roundtrip_dice": 0.9795,
+    "itk_label_gaussian_roundtrip_dice": 0.9872,
+    "dice_1p5mm_grid": 0.9381,
+    "dice_original_grid_pred_restored_nearest": 0.9474,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9539
+   },
+   "tumor": {
+    "original_ml": 65.524,
+    "monai_nearest_ml": 66.315,
+    "monai_nearest_volume_error_pct": 1.207,
+    "itk_nearest_ml": 65.62,
+    "itk_nearest_volume_error_pct": 0.146,
+    "itk_label_gaussian_ml": 65.387,
+    "itk_label_gaussian_volume_error_pct": -0.209,
+    "monai_nearest_roundtrip_dice": 0.9762,
+    "itk_nearest_roundtrip_dice": 0.9762,
+    "itk_label_gaussian_roundtrip_dice": 0.9849,
+    "dice_1p5mm_grid": 0.7837,
+    "dice_original_grid_pred_restored_nearest": 0.7871,
+    "dice_original_grid_pred_restored_label_gaussian": 0.7931
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00042",
+   "original_spacing_mm": [
+    0.8594,
+    0.8594,
+    1.0
+   ],
+   "iso_size": [
+    294,
+    294,
+    201
+   ],
+   "seconds_itk_linear_plus_nearest": 0.14,
+   "seconds_itk_label_gaussian": 2.15,
+   "seconds_monai_load_orientation_spacingd": 3.35,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 2694,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 362.072,
+    "monai_nearest_ml": 363.609,
+    "monai_nearest_volume_error_pct": 0.425,
+    "itk_nearest_ml": 361.969,
+    "itk_nearest_volume_error_pct": -0.028,
+    "itk_label_gaussian_ml": 361.628,
+    "itk_label_gaussian_volume_error_pct": -0.123,
+    "monai_nearest_roundtrip_dice": 0.9705,
+    "itk_nearest_roundtrip_dice": 0.9704,
+    "itk_label_gaussian_roundtrip_dice": 0.9854,
+    "dice_1p5mm_grid": 0.9167,
+    "dice_original_grid_pred_restored_nearest": 0.9116,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9183
+   },
+   "tumor": {
+    "original_ml": 1416.768,
+    "monai_nearest_ml": 1420.335,
+    "monai_nearest_volume_error_pct": 0.252,
+    "itk_nearest_ml": 1416.595,
+    "itk_nearest_volume_error_pct": -0.012,
+    "itk_label_gaussian_ml": 1416.049,
+    "itk_label_gaussian_volume_error_pct": -0.051,
+    "monai_nearest_roundtrip_dice": 0.9889,
+    "itk_nearest_roundtrip_dice": 0.9889,
+    "itk_label_gaussian_roundtrip_dice": 0.9943,
+    "dice_1p5mm_grid": 0.8835,
+    "dice_original_grid_pred_restored_nearest": 0.8833,
+    "dice_original_grid_pred_restored_label_gaussian": 0.8848
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00013",
+   "original_spacing_mm": [
+    0.6836,
+    0.6836,
+    3.0
+   ],
+   "iso_size": [
+    234,
+    234,
+    183
+   ],
+   "seconds_itk_linear_plus_nearest": 0.04,
+   "seconds_itk_label_gaussian": 0.98,
+   "seconds_monai_load_orientation_spacingd": 1.08,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 3242,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 276.444,
+    "monai_nearest_ml": 275.994,
+    "monai_nearest_volume_error_pct": -0.163,
+    "itk_nearest_ml": 276.493,
+    "itk_nearest_volume_error_pct": 0.018,
+    "itk_label_gaussian_ml": 275.724,
+    "itk_label_gaussian_volume_error_pct": -0.26,
+    "monai_nearest_roundtrip_dice": 0.9789,
+    "itk_nearest_roundtrip_dice": 0.9789,
+    "itk_label_gaussian_roundtrip_dice": 0.9886,
+    "dice_1p5mm_grid": 0.951,
+    "dice_original_grid_pred_restored_nearest": 0.9535,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9578
+   },
+   "tumor": {
+    "original_ml": 37.488,
+    "monai_nearest_ml": 39.238,
+    "monai_nearest_volume_error_pct": 4.667,
+    "itk_nearest_ml": 37.658,
+    "itk_nearest_volume_error_pct": 0.453,
+    "itk_label_gaussian_ml": 37.257,
+    "itk_label_gaussian_volume_error_pct": -0.618,
+    "monai_nearest_roundtrip_dice": 0.9761,
+    "itk_nearest_roundtrip_dice": 0.9761,
+    "itk_label_gaussian_roundtrip_dice": 0.9861,
+    "dice_1p5mm_grid": 0.8727,
+    "dice_original_grid_pred_restored_nearest": 0.8869,
+    "dice_original_grid_pred_restored_label_gaussian": 0.8881
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00061",
+   "original_spacing_mm": [
+    0.9766,
+    0.9766,
+    5.0
+   ],
+   "iso_size": [
+    334,
+    334,
+    94
+   ],
+   "seconds_itk_linear_plus_nearest": 0.02,
+   "seconds_itk_label_gaussian": 0.78,
+   "seconds_monai_load_orientation_spacingd": 1.22,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 2237,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 595.774,
+    "monai_nearest_ml": 595.296,
+    "monai_nearest_volume_error_pct": -0.08,
+    "itk_nearest_ml": 595.333,
+    "itk_nearest_volume_error_pct": -0.074,
+    "itk_label_gaussian_ml": 595.148,
+    "itk_label_gaussian_volume_error_pct": -0.105,
+    "monai_nearest_roundtrip_dice": 0.9853,
+    "itk_nearest_roundtrip_dice": 0.9853,
+    "itk_label_gaussian_roundtrip_dice": 0.9918,
+    "dice_1p5mm_grid": 0.9475,
+    "dice_original_grid_pred_restored_nearest": 0.9555,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9596
+   },
+   "tumor": {
+    "original_ml": 110.989,
+    "monai_nearest_ml": 109.853,
+    "monai_nearest_volume_error_pct": -1.023,
+    "itk_nearest_ml": 111.075,
+    "itk_nearest_volume_error_pct": 0.078,
+    "itk_label_gaussian_ml": 110.855,
+    "itk_label_gaussian_volume_error_pct": -0.12,
+    "monai_nearest_roundtrip_dice": 0.9822,
+    "itk_nearest_roundtrip_dice": 0.9822,
+    "itk_label_gaussian_roundtrip_dice": 0.9902,
+    "dice_1p5mm_grid": 0.865,
+    "dice_original_grid_pred_restored_nearest": 0.8735,
+    "dice_original_grid_pred_restored_label_gaussian": 0.8786
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00073",
+   "original_spacing_mm": [
+    0.8594,
+    0.8594,
+    5.0
+   ],
+   "iso_size": [
+    294,
+    294,
+    481
+   ],
+   "seconds_itk_linear_plus_nearest": 0.09,
+   "seconds_itk_label_gaussian": 3.32,
+   "seconds_monai_load_orientation_spacingd": 3.08,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 0,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 543.47,
+    "monai_nearest_ml": 542.903,
+    "monai_nearest_volume_error_pct": -0.104,
+    "itk_nearest_ml": 542.903,
+    "itk_nearest_volume_error_pct": -0.104,
+    "itk_label_gaussian_ml": 542.717,
+    "itk_label_gaussian_volume_error_pct": -0.139,
+    "monai_nearest_roundtrip_dice": 0.9831,
+    "itk_nearest_roundtrip_dice": 0.9831,
+    "itk_label_gaussian_roundtrip_dice": 0.99,
+    "dice_1p5mm_grid": 0.9319,
+    "dice_original_grid_pred_restored_nearest": 0.9366,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9408
+   },
+   "tumor": {
+    "original_ml": 448.724,
+    "monai_nearest_ml": 448.298,
+    "monai_nearest_volume_error_pct": -0.095,
+    "itk_nearest_ml": 448.298,
+    "itk_nearest_volume_error_pct": -0.095,
+    "itk_label_gaussian_ml": 448.824,
+    "itk_label_gaussian_volume_error_pct": 0.022,
+    "monai_nearest_roundtrip_dice": 0.9873,
+    "itk_nearest_roundtrip_dice": 0.9873,
+    "itk_label_gaussian_roundtrip_dice": 0.9922,
+    "dice_1p5mm_grid": 0.9148,
+    "dice_original_grid_pred_restored_nearest": 0.9186,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9209
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00005",
+   "original_spacing_mm": [
+    0.9766,
+    0.9766,
+    0.5
+   ],
+   "iso_size": [
+    334,
+    334,
+    279
+   ],
+   "seconds_itk_linear_plus_nearest": 0.16,
+   "seconds_itk_label_gaussian": 4.19,
+   "seconds_monai_load_orientation_spacingd": 7.59,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 0,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 430.187,
+    "monai_nearest_ml": 430.788,
+    "monai_nearest_volume_error_pct": 0.14,
+    "itk_nearest_ml": 430.788,
+    "itk_nearest_volume_error_pct": 0.14,
+    "itk_label_gaussian_ml": 429.968,
+    "itk_label_gaussian_volume_error_pct": -0.051,
+    "monai_nearest_roundtrip_dice": 0.9771,
+    "itk_nearest_roundtrip_dice": 0.9771,
+    "itk_label_gaussian_roundtrip_dice": 0.9866,
+    "dice_1p5mm_grid": 0.8721,
+    "dice_original_grid_pred_restored_nearest": 0.8702,
+    "dice_original_grid_pred_restored_label_gaussian": 0.8745
+   },
+   "tumor": {
+    "original_ml": 60.293,
+    "monai_nearest_ml": 60.2,
+    "monai_nearest_volume_error_pct": -0.155,
+    "itk_nearest_ml": 60.2,
+    "itk_nearest_volume_error_pct": -0.155,
+    "itk_label_gaussian_ml": 60.031,
+    "itk_label_gaussian_volume_error_pct": -0.435,
+    "monai_nearest_roundtrip_dice": 0.9706,
+    "itk_nearest_roundtrip_dice": 0.9706,
+    "itk_label_gaussian_roundtrip_dice": 0.9823,
+    "dice_1p5mm_grid": 0.6775,
+    "dice_original_grid_pred_restored_nearest": 0.6778,
+    "dice_original_grid_pred_restored_label_gaussian": 0.6777
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00021",
+   "original_spacing_mm": [
+    0.8223,
+    0.8223,
+    5.0
+   ],
+   "iso_size": [
+    281,
+    281,
+    124
+   ],
+   "seconds_itk_linear_plus_nearest": 0.03,
+   "seconds_itk_label_gaussian": 0.79,
+   "seconds_monai_load_orientation_spacingd": 0.64,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 1247,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 350.684,
+    "monai_nearest_ml": 350.517,
+    "monai_nearest_volume_error_pct": -0.047,
+    "itk_nearest_ml": 350.548,
+    "itk_nearest_volume_error_pct": -0.039,
+    "itk_label_gaussian_ml": 350.642,
+    "itk_label_gaussian_volume_error_pct": -0.012,
+    "monai_nearest_roundtrip_dice": 0.9771,
+    "itk_nearest_roundtrip_dice": 0.9771,
+    "itk_label_gaussian_roundtrip_dice": 0.9861,
+    "dice_1p5mm_grid": 0.9228,
+    "dice_original_grid_pred_restored_nearest": 0.9334,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9404
+   },
+   "tumor": {
+    "original_ml": 23.641,
+    "monai_nearest_ml": 24.202,
+    "monai_nearest_volume_error_pct": 2.375,
+    "itk_nearest_ml": 24.0,
+    "itk_nearest_volume_error_pct": 1.519,
+    "itk_label_gaussian_ml": 23.733,
+    "itk_label_gaussian_volume_error_pct": 0.391,
+    "monai_nearest_roundtrip_dice": 0.9713,
+    "itk_nearest_roundtrip_dice": 0.9713,
+    "itk_label_gaussian_roundtrip_dice": 0.9834,
+    "dice_1p5mm_grid": 0.164,
+    "dice_original_grid_pred_restored_nearest": 0.171,
+    "dice_original_grid_pred_restored_label_gaussian": 0.1682
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00209",
+   "original_spacing_mm": [
+    0.7812,
+    0.7812,
+    5.0
+   ],
+   "iso_size": [
+    267,
+    267,
+    338
+   ],
+   "seconds_itk_linear_plus_nearest": 0.06,
+   "seconds_itk_label_gaussian": 2.03,
+   "seconds_monai_load_orientation_spacingd": 1.59,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 737,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 477.109,
+    "monai_nearest_ml": 477.89,
+    "monai_nearest_volume_error_pct": 0.164,
+    "itk_nearest_ml": 476.752,
+    "itk_nearest_volume_error_pct": -0.075,
+    "itk_label_gaussian_ml": 476.597,
+    "itk_label_gaussian_volume_error_pct": -0.107,
+    "monai_nearest_roundtrip_dice": 0.9813,
+    "itk_nearest_roundtrip_dice": 0.9813,
+    "itk_label_gaussian_roundtrip_dice": 0.9886,
+    "dice_1p5mm_grid": 0.9651,
+    "dice_original_grid_pred_restored_nearest": 0.9706,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9767
+   },
+   "tumor": {
+    "original_ml": 2.298,
+    "monai_nearest_ml": 2.352,
+    "monai_nearest_volume_error_pct": 2.367,
+    "itk_nearest_ml": 2.352,
+    "itk_nearest_volume_error_pct": 2.367,
+    "itk_label_gaussian_ml": 2.251,
+    "itk_label_gaussian_volume_error_pct": -2.039,
+    "monai_nearest_roundtrip_dice": 0.9294,
+    "itk_nearest_roundtrip_dice": 0.9294,
+    "itk_label_gaussian_roundtrip_dice": 0.9535,
+    "dice_1p5mm_grid": 0.4462,
+    "dice_original_grid_pred_restored_nearest": 0.4296,
+    "dice_original_grid_pred_restored_label_gaussian": 0.4601
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00036",
+   "original_spacing_mm": [
+    0.7988,
+    0.7988,
+    3.0
+   ],
+   "iso_size": [
+    273,
+    273,
+    325
+   ],
+   "seconds_itk_linear_plus_nearest": 0.06,
+   "seconds_itk_label_gaussian": 2.19,
+   "seconds_monai_load_orientation_spacingd": 3.28,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 4135,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 561.041,
+    "monai_nearest_ml": 557.931,
+    "monai_nearest_volume_error_pct": -0.554,
+    "itk_nearest_ml": 560.844,
+    "itk_nearest_volume_error_pct": -0.035,
+    "itk_label_gaussian_ml": 560.361,
+    "itk_label_gaussian_volume_error_pct": -0.121,
+    "monai_nearest_roundtrip_dice": 0.9815,
+    "itk_nearest_roundtrip_dice": 0.9815,
+    "itk_label_gaussian_roundtrip_dice": 0.99,
+    "dice_1p5mm_grid": 0.9501,
+    "dice_original_grid_pred_restored_nearest": 0.9547,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9593
+   },
+   "tumor": {
+    "original_ml": 76.374,
+    "monai_nearest_ml": 76.704,
+    "monai_nearest_volume_error_pct": 0.431,
+    "itk_nearest_ml": 76.025,
+    "itk_nearest_volume_error_pct": -0.457,
+    "itk_label_gaussian_ml": 76.049,
+    "itk_label_gaussian_volume_error_pct": -0.426,
+    "monai_nearest_roundtrip_dice": 0.9792,
+    "itk_nearest_roundtrip_dice": 0.9792,
+    "itk_label_gaussian_roundtrip_dice": 0.9879,
+    "dice_1p5mm_grid": 0.8342,
+    "dice_original_grid_pred_restored_nearest": 0.8407,
+    "dice_original_grid_pred_restored_label_gaussian": 0.8429
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00111",
+   "original_spacing_mm": [
+    0.7422,
+    0.7422,
+    2.5
+   ],
+   "iso_size": [
+    254,
+    254,
+    309
+   ],
+   "seconds_itk_linear_plus_nearest": 0.07,
+   "seconds_itk_label_gaussian": 1.91,
+   "seconds_monai_load_orientation_spacingd": 2.23,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 0,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 447.837,
+    "monai_nearest_ml": 446.388,
+    "monai_nearest_volume_error_pct": -0.324,
+    "itk_nearest_ml": 446.388,
+    "itk_nearest_volume_error_pct": -0.324,
+    "itk_label_gaussian_ml": 448.234,
+    "itk_label_gaussian_volume_error_pct": 0.089,
+    "monai_nearest_roundtrip_dice": 0.979,
+    "itk_nearest_roundtrip_dice": 0.979,
+    "itk_label_gaussian_roundtrip_dice": 0.9889,
+    "dice_1p5mm_grid": 0.9598,
+    "dice_original_grid_pred_restored_nearest": 0.9556,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9626
+   },
+   "tumor": {
+    "original_ml": 28.47,
+    "monai_nearest_ml": 27.601,
+    "monai_nearest_volume_error_pct": -3.054,
+    "itk_nearest_ml": 27.601,
+    "itk_nearest_volume_error_pct": -3.054,
+    "itk_label_gaussian_ml": 28.326,
+    "itk_label_gaussian_volume_error_pct": -0.506,
+    "monai_nearest_roundtrip_dice": 0.9713,
+    "itk_nearest_roundtrip_dice": 0.9713,
+    "itk_label_gaussian_roundtrip_dice": 0.9856,
+    "dice_1p5mm_grid": 0.8476,
+    "dice_original_grid_pred_restored_nearest": 0.8435,
+    "dice_original_grid_pred_restored_label_gaussian": 0.8488
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00140",
+   "original_spacing_mm": [
+    0.8242,
+    0.8242,
+    1.0
+   ],
+   "iso_size": [
+    282,
+    282,
+    186
+   ],
+   "seconds_itk_linear_plus_nearest": 0.11,
+   "seconds_itk_label_gaussian": 1.87,
+   "seconds_monai_load_orientation_spacingd": 3.7,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 1707,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 492.62,
+    "monai_nearest_ml": 494.343,
+    "monai_nearest_volume_error_pct": 0.35,
+    "itk_nearest_ml": 493.287,
+    "itk_nearest_volume_error_pct": 0.135,
+    "itk_label_gaussian_ml": 492.197,
+    "itk_label_gaussian_volume_error_pct": -0.086,
+    "monai_nearest_roundtrip_dice": 0.9783,
+    "itk_nearest_roundtrip_dice": 0.9784,
+    "itk_label_gaussian_roundtrip_dice": 0.9893,
+    "dice_1p5mm_grid": 0.964,
+    "dice_original_grid_pred_restored_nearest": 0.9606,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9663
+   },
+   "tumor": {
+    "original_ml": 5.026,
+    "monai_nearest_ml": 5.062,
+    "monai_nearest_volume_error_pct": 0.718,
+    "itk_nearest_ml": 4.978,
+    "itk_nearest_volume_error_pct": -0.961,
+    "itk_label_gaussian_ml": 5.002,
+    "itk_label_gaussian_volume_error_pct": -0.491,
+    "monai_nearest_roundtrip_dice": 0.9228,
+    "itk_nearest_roundtrip_dice": 0.9247,
+    "itk_label_gaussian_roundtrip_dice": 0.9593,
+    "dice_1p5mm_grid": 0.2473,
+    "dice_original_grid_pred_restored_nearest": 0.2425,
+    "dice_original_grid_pred_restored_label_gaussian": 0.241
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00152",
+   "original_spacing_mm": [
+    0.7227,
+    0.7227,
+    5.0
+   ],
+   "iso_size": [
+    247,
+    247,
+    124
+   ],
+   "seconds_itk_linear_plus_nearest": 0.02,
+   "seconds_itk_label_gaussian": 0.68,
+   "seconds_monai_load_orientation_spacingd": 0.51,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 1210,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 388.034,
+    "monai_nearest_ml": 389.06,
+    "monai_nearest_volume_error_pct": 0.264,
+    "itk_nearest_ml": 388.54,
+    "itk_nearest_volume_error_pct": 0.13,
+    "itk_label_gaussian_ml": 388.172,
+    "itk_label_gaussian_volume_error_pct": 0.036,
+    "monai_nearest_roundtrip_dice": 0.9799,
+    "itk_nearest_roundtrip_dice": 0.9799,
+    "itk_label_gaussian_roundtrip_dice": 0.9877,
+    "dice_1p5mm_grid": 0.963,
+    "dice_original_grid_pred_restored_nearest": 0.9682,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9749
+   },
+   "tumor": {
+    "original_ml": 9.494,
+    "monai_nearest_ml": 9.791,
+    "monai_nearest_volume_error_pct": 3.125,
+    "itk_nearest_ml": 9.416,
+    "itk_nearest_volume_error_pct": -0.821,
+    "itk_label_gaussian_ml": 9.504,
+    "itk_label_gaussian_volume_error_pct": 0.103,
+    "monai_nearest_roundtrip_dice": 0.9677,
+    "itk_nearest_roundtrip_dice": 0.9677,
+    "itk_label_gaussian_roundtrip_dice": 0.9799,
+    "dice_1p5mm_grid": 0.8501,
+    "dice_original_grid_pred_restored_nearest": 0.8742,
+    "dice_original_grid_pred_restored_label_gaussian": 0.8861
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00015",
+   "original_spacing_mm": [
+    0.7051,
+    0.7051,
+    3.0
+   ],
+   "iso_size": [
+    241,
+    241,
+    149
+   ],
+   "seconds_itk_linear_plus_nearest": 0.04,
+   "seconds_itk_label_gaussian": 0.85,
+   "seconds_monai_load_orientation_spacingd": 0.76,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 9628,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 930.477,
+    "monai_nearest_ml": 929.215,
+    "monai_nearest_volume_error_pct": -0.136,
+    "itk_nearest_ml": 930.386,
+    "itk_nearest_volume_error_pct": -0.01,
+    "itk_label_gaussian_ml": 930.059,
+    "itk_label_gaussian_volume_error_pct": -0.045,
+    "monai_nearest_roundtrip_dice": 0.9861,
+    "itk_nearest_roundtrip_dice": 0.9861,
+    "itk_label_gaussian_roundtrip_dice": 0.9923,
+    "dice_1p5mm_grid": 0.5852,
+    "dice_original_grid_pred_restored_nearest": 0.5872,
+    "dice_original_grid_pred_restored_label_gaussian": 0.5901
+   },
+   "tumor": {
+    "original_ml": 17.244,
+    "monai_nearest_ml": 16.882,
+    "monai_nearest_volume_error_pct": -2.099,
+    "itk_nearest_ml": 17.239,
+    "itk_nearest_volume_error_pct": -0.024,
+    "itk_label_gaussian_ml": 17.111,
+    "itk_label_gaussian_volume_error_pct": -0.768,
+    "monai_nearest_roundtrip_dice": 0.9672,
+    "itk_nearest_roundtrip_dice": 0.9672,
+    "itk_label_gaussian_roundtrip_dice": 0.9794,
+    "dice_1p5mm_grid": 0.8859,
+    "dice_original_grid_pred_restored_nearest": 0.8995,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9032
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00045",
+   "original_spacing_mm": [
+    0.741,
+    0.741,
+    3.0
+   ],
+   "iso_size": [
+    253,
+    253,
+    123
+   ],
+   "seconds_itk_linear_plus_nearest": 0.03,
+   "seconds_itk_label_gaussian": 0.74,
+   "seconds_monai_load_orientation_spacingd": 0.71,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 6660,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 204.019,
+    "monai_nearest_ml": 205.089,
+    "monai_nearest_volume_error_pct": 0.524,
+    "itk_nearest_ml": 204.701,
+    "itk_nearest_volume_error_pct": 0.334,
+    "itk_label_gaussian_ml": 203.955,
+    "itk_label_gaussian_volume_error_pct": -0.032,
+    "monai_nearest_roundtrip_dice": 0.9736,
+    "itk_nearest_roundtrip_dice": 0.9736,
+    "itk_label_gaussian_roundtrip_dice": 0.9854,
+    "dice_1p5mm_grid": 0.8842,
+    "dice_original_grid_pred_restored_nearest": 0.8885,
+    "dice_original_grid_pred_restored_label_gaussian": 0.8931
+   },
+   "tumor": {
+    "original_ml": 65.076,
+    "monai_nearest_ml": 66.768,
+    "monai_nearest_volume_error_pct": 2.599,
+    "itk_nearest_ml": 65.772,
+    "itk_nearest_volume_error_pct": 1.07,
+    "itk_label_gaussian_ml": 64.624,
+    "itk_label_gaussian_volume_error_pct": -0.694,
+    "monai_nearest_roundtrip_dice": 0.9783,
+    "itk_nearest_roundtrip_dice": 0.9783,
+    "itk_label_gaussian_roundtrip_dice": 0.9884,
+    "dice_1p5mm_grid": 0.7043,
+    "dice_original_grid_pred_restored_nearest": 0.7183,
+    "dice_original_grid_pred_restored_label_gaussian": 0.7136
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00182",
+   "original_spacing_mm": [
+    0.9375,
+    0.9375,
+    5.0
+   ],
+   "iso_size": [
+    320,
+    320,
+    308
+   ],
+   "seconds_itk_linear_plus_nearest": 0.07,
+   "seconds_itk_label_gaussian": 2.38,
+   "seconds_monai_load_orientation_spacingd": 1.89,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 0,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 547.027,
+    "monai_nearest_ml": 546.959,
+    "monai_nearest_volume_error_pct": -0.012,
+    "itk_nearest_ml": 546.959,
+    "itk_nearest_volume_error_pct": -0.012,
+    "itk_label_gaussian_ml": 547.516,
+    "itk_label_gaussian_volume_error_pct": 0.089,
+    "monai_nearest_roundtrip_dice": 0.9842,
+    "itk_nearest_roundtrip_dice": 0.9842,
+    "itk_label_gaussian_roundtrip_dice": 0.9904,
+    "dice_1p5mm_grid": 0.9456,
+    "dice_original_grid_pred_restored_nearest": 0.95,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9531
+   },
+   "tumor": {
+    "original_ml": 6.561,
+    "monai_nearest_ml": 6.453,
+    "monai_nearest_volume_error_pct": -1.647,
+    "itk_nearest_ml": 6.453,
+    "itk_nearest_volume_error_pct": -1.647,
+    "itk_label_gaussian_ml": 6.332,
+    "itk_label_gaussian_volume_error_pct": -3.498,
+    "monai_nearest_roundtrip_dice": 0.9537,
+    "itk_nearest_roundtrip_dice": 0.9537,
+    "itk_label_gaussian_roundtrip_dice": 0.9731,
+    "dice_1p5mm_grid": 0.5959,
+    "dice_original_grid_pred_restored_nearest": 0.5595,
+    "dice_original_grid_pred_restored_label_gaussian": 0.576
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00002",
+   "original_spacing_mm": [
+    0.9395,
+    0.9395,
+    1.0
+   ],
+   "iso_size": [
+    321,
+    321,
+    174
+   ],
+   "seconds_itk_linear_plus_nearest": 0.11,
+   "seconds_itk_label_gaussian": 2.06,
+   "seconds_monai_load_orientation_spacingd": 2.81,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 2012,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 542.161,
+    "monai_nearest_ml": 541.414,
+    "monai_nearest_volume_error_pct": -0.138,
+    "itk_nearest_ml": 542.768,
+    "itk_nearest_volume_error_pct": 0.112,
+    "itk_label_gaussian_ml": 541.333,
+    "itk_label_gaussian_volume_error_pct": -0.153,
+    "monai_nearest_roundtrip_dice": 0.9801,
+    "itk_nearest_roundtrip_dice": 0.9801,
+    "itk_label_gaussian_roundtrip_dice": 0.9897,
+    "dice_1p5mm_grid": 0.9635,
+    "dice_original_grid_pred_restored_nearest": 0.9613,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9651
+   },
+   "tumor": {
+    "original_ml": 34.976,
+    "monai_nearest_ml": 35.124,
+    "monai_nearest_volume_error_pct": 0.421,
+    "itk_nearest_ml": 34.952,
+    "itk_nearest_volume_error_pct": -0.071,
+    "itk_label_gaussian_ml": 34.823,
+    "itk_label_gaussian_volume_error_pct": -0.438,
+    "monai_nearest_roundtrip_dice": 0.966,
+    "itk_nearest_roundtrip_dice": 0.9649,
+    "itk_label_gaussian_roundtrip_dice": 0.9819,
+    "dice_1p5mm_grid": 0.8765,
+    "dice_original_grid_pred_restored_nearest": 0.8689,
+    "dice_original_grid_pred_restored_label_gaussian": 0.8754
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00201",
+   "original_spacing_mm": [
+    0.7812,
+    0.7812,
+    2.5
+   ],
+   "iso_size": [
+    267,
+    267,
+    159
+   ],
+   "seconds_itk_linear_plus_nearest": 0.04,
+   "seconds_itk_label_gaussian": 1.1,
+   "seconds_monai_load_orientation_spacingd": 2.19,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 0,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 605.583,
+    "monai_nearest_ml": 605.09,
+    "monai_nearest_volume_error_pct": -0.081,
+    "itk_nearest_ml": 605.09,
+    "itk_nearest_volume_error_pct": -0.081,
+    "itk_label_gaussian_ml": 606.514,
+    "itk_label_gaussian_volume_error_pct": 0.154,
+    "monai_nearest_roundtrip_dice": 0.9821,
+    "itk_nearest_roundtrip_dice": 0.9821,
+    "itk_label_gaussian_roundtrip_dice": 0.9902,
+    "dice_1p5mm_grid": 0.9736,
+    "dice_original_grid_pred_restored_nearest": 0.9732,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9795
+   },
+   "tumor": {
+    "original_ml": 2.629,
+    "monai_nearest_ml": 2.639,
+    "monai_nearest_volume_error_pct": 0.386,
+    "itk_nearest_ml": 2.639,
+    "itk_nearest_volume_error_pct": 0.386,
+    "itk_label_gaussian_ml": 2.579,
+    "itk_label_gaussian_volume_error_pct": -1.924,
+    "monai_nearest_roundtrip_dice": 0.9518,
+    "itk_nearest_roundtrip_dice": 0.9518,
+    "itk_label_gaussian_roundtrip_dice": 0.9679,
+    "dice_1p5mm_grid": 0.6619,
+    "dice_original_grid_pred_restored_nearest": 0.6531,
+    "dice_original_grid_pred_restored_label_gaussian": 0.6591
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00030",
+   "original_spacing_mm": [
+    0.7305,
+    0.7305,
+    5.0
+   ],
+   "iso_size": [
+    250,
+    250,
+    124
+   ],
+   "seconds_itk_linear_plus_nearest": 0.02,
+   "seconds_itk_label_gaussian": 0.69,
+   "seconds_monai_load_orientation_spacingd": 0.58,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 3524,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 206.676,
+    "monai_nearest_ml": 207.61,
+    "monai_nearest_volume_error_pct": 0.452,
+    "itk_nearest_ml": 206.861,
+    "itk_nearest_volume_error_pct": 0.089,
+    "itk_label_gaussian_ml": 206.25,
+    "itk_label_gaussian_volume_error_pct": -0.206,
+    "monai_nearest_roundtrip_dice": 0.9741,
+    "itk_nearest_roundtrip_dice": 0.9741,
+    "itk_label_gaussian_roundtrip_dice": 0.9845,
+    "dice_1p5mm_grid": 0.7818,
+    "dice_original_grid_pred_restored_nearest": 0.7855,
+    "dice_original_grid_pred_restored_label_gaussian": 0.7914
+   },
+   "tumor": {
+    "original_ml": 1463.839,
+    "monai_nearest_ml": 1465.729,
+    "monai_nearest_volume_error_pct": 0.129,
+    "itk_nearest_ml": 1462.84,
+    "itk_nearest_volume_error_pct": -0.068,
+    "itk_label_gaussian_ml": 1463.454,
+    "itk_label_gaussian_volume_error_pct": -0.026,
+    "monai_nearest_roundtrip_dice": 0.9921,
+    "itk_nearest_roundtrip_dice": 0.9921,
+    "itk_label_gaussian_roundtrip_dice": 0.9953,
+    "dice_1p5mm_grid": 0.9419,
+    "dice_original_grid_pred_restored_nearest": 0.9435,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9446
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00169",
+   "original_spacing_mm": [
+    0.755,
+    0.755,
+    5.0
+   ],
+   "iso_size": [
+    258,
+    258,
+    334
+   ],
+   "seconds_itk_linear_plus_nearest": 0.05,
+   "seconds_itk_label_gaussian": 1.93,
+   "seconds_monai_load_orientation_spacingd": 1.51,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 627,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 374.062,
+    "monai_nearest_ml": 377.527,
+    "monai_nearest_volume_error_pct": 0.927,
+    "itk_nearest_ml": 376.923,
+    "itk_nearest_volume_error_pct": 0.765,
+    "itk_label_gaussian_ml": 374.666,
+    "itk_label_gaussian_volume_error_pct": 0.161,
+    "monai_nearest_roundtrip_dice": 0.9783,
+    "itk_nearest_roundtrip_dice": 0.9783,
+    "itk_label_gaussian_roundtrip_dice": 0.9865,
+    "dice_1p5mm_grid": 0.9332,
+    "dice_original_grid_pred_restored_nearest": 0.9432,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9479
+   },
+   "tumor": {
+    "original_ml": 40.207,
+    "monai_nearest_ml": 41.955,
+    "monai_nearest_volume_error_pct": 4.347,
+    "itk_nearest_ml": 41.955,
+    "itk_nearest_volume_error_pct": 4.347,
+    "itk_label_gaussian_ml": 40.314,
+    "itk_label_gaussian_volume_error_pct": 0.268,
+    "monai_nearest_roundtrip_dice": 0.9709,
+    "itk_nearest_roundtrip_dice": 0.9709,
+    "itk_label_gaussian_roundtrip_dice": 0.983,
+    "dice_1p5mm_grid": 0.6986,
+    "dice_original_grid_pred_restored_nearest": 0.7187,
+    "dice_original_grid_pred_restored_label_gaussian": 0.7125
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00044",
+   "original_spacing_mm": [
+    0.9668,
+    0.9668,
+    5.0
+   ],
+   "iso_size": [
+    330,
+    330,
+    334
+   ],
+   "seconds_itk_linear_plus_nearest": 0.07,
+   "seconds_itk_label_gaussian": 2.74,
+   "seconds_monai_load_orientation_spacingd": 1.99,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 926,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 524.486,
+    "monai_nearest_ml": 525.444,
+    "monai_nearest_volume_error_pct": 0.183,
+    "itk_nearest_ml": 524.796,
+    "itk_nearest_volume_error_pct": 0.059,
+    "itk_label_gaussian_ml": 523.837,
+    "itk_label_gaussian_volume_error_pct": -0.124,
+    "monai_nearest_roundtrip_dice": 0.9821,
+    "itk_nearest_roundtrip_dice": 0.9821,
+    "itk_label_gaussian_roundtrip_dice": 0.9898,
+    "dice_1p5mm_grid": 0.8763,
+    "dice_original_grid_pred_restored_nearest": 0.8789,
+    "dice_original_grid_pred_restored_label_gaussian": 0.8823
+   },
+   "tumor": {
+    "original_ml": 129.025,
+    "monai_nearest_ml": 129.225,
+    "monai_nearest_volume_error_pct": 0.155,
+    "itk_nearest_ml": 128.469,
+    "itk_nearest_volume_error_pct": -0.431,
+    "itk_label_gaussian_ml": 128.591,
+    "itk_label_gaussian_volume_error_pct": -0.337,
+    "monai_nearest_roundtrip_dice": 0.9826,
+    "itk_nearest_roundtrip_dice": 0.9826,
+    "itk_label_gaussian_roundtrip_dice": 0.9903,
+    "dice_1p5mm_grid": 0.4401,
+    "dice_original_grid_pred_restored_nearest": 0.4459,
+    "dice_original_grid_pred_restored_label_gaussian": 0.4456
+   },
+   "saved_reference_matches_monai_nearest": true
+  },
+  {
+   "patient_id": "KiTS-00047",
+   "original_spacing_mm": [
+    0.8555,
+    0.8555,
+    5.0
+   ],
+   "iso_size": [
+    292,
+    292,
+    471
+   ],
+   "seconds_itk_linear_plus_nearest": 0.09,
+   "seconds_itk_label_gaussian": 3.18,
+   "seconds_monai_load_orientation_spacingd": 2.97,
+   "grid_origin_diff_mm": 0.0,
+   "grid_shape_equal": true,
+   "hu_abs_diff_itk_vs_monai": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "label_voxels_disagree_itk_nearest_vs_monai": 1020,
+   "label_voxels_disagree_not_at_half_voxel_ties": 0,
+   "kidney": {
+    "original_ml": 383.466,
+    "monai_nearest_ml": 384.753,
+    "monai_nearest_volume_error_pct": 0.336,
+    "itk_nearest_ml": 384.51,
+    "itk_nearest_volume_error_pct": 0.272,
+    "itk_label_gaussian_ml": 382.674,
+    "itk_label_gaussian_volume_error_pct": -0.207,
+    "monai_nearest_roundtrip_dice": 0.976,
+    "itk_nearest_roundtrip_dice": 0.976,
+    "itk_label_gaussian_roundtrip_dice": 0.9862,
+    "dice_1p5mm_grid": 0.9059,
+    "dice_original_grid_pred_restored_nearest": 0.9114,
+    "dice_original_grid_pred_restored_label_gaussian": 0.9173
+   },
+   "tumor": {
+    "original_ml": 156.527,
+    "monai_nearest_ml": 155.604,
+    "monai_nearest_volume_error_pct": -0.589,
+    "itk_nearest_ml": 156.833,
+    "itk_nearest_volume_error_pct": 0.196,
+    "itk_label_gaussian_ml": 156.59,
+    "itk_label_gaussian_volume_error_pct": 0.04,
+    "monai_nearest_roundtrip_dice": 0.9827,
+    "itk_nearest_roundtrip_dice": 0.9827,
+    "itk_label_gaussian_roundtrip_dice": 0.9899,
+    "dice_1p5mm_grid": 0.7462,
+    "dice_original_grid_pred_restored_nearest": 0.7497,
+    "dice_original_grid_pred_restored_label_gaussian": 0.7512
+   },
+   "saved_reference_matches_monai_nearest": true
+  }
+ ]
+}

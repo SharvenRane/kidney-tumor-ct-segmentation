@@ -24,7 +24,7 @@ from monai.metrics import DiceMetric, HausdorffDistanceMetric
 from monai.networks.nets import SegResNet
 from monai.transforms import AsDiscrete, Compose
 
-from data import build_datalist, val_transforms
+from data import PIXDIM, build_datalist, val_transforms
 
 ROI = (96, 96, 96)
 CLASSES = ["kidney", "tumor"]
@@ -102,7 +102,8 @@ def main():
         pred = [post_pred(p) for p in decollate_batch(logits)]
         lab = [post_label(l) for l in decollate_batch(y)]
         d = dice_m(y_pred=pred, y=lab)[0].tolist()
-        h = hd_m(y_pred=pred, y=lab)[0].tolist()
+        # spacing makes HD95 millimetres; without it MONAI returns voxel units of the 1.5 mm grid
+        h = hd_m(y_pred=pred, y=lab, spacing=PIXDIM)[0].tolist()
         pred_np = torch.argmax(logits, dim=1)[0].cpu().numpy()
         gt_np = y[0, 0].cpu().numpy()
         rec = {"patient_id": item["patient_id"]}

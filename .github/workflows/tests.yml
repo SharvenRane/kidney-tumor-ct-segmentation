@@ -1,0 +1,22 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: System libraries for the VTK wheel
+        run: sudo apt-get update && sudo apt-get install -y libgl1 libxrender1 libxext6
+      - name: Install
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install "monai==1.5.2" numpy nibabel pydicom "highdicom>=0.27" itk vtk scikit-image pytest
+      - name: Test (synthetic data only, TensorRT tests skip without a GPU)
+        run: python -m pytest -q

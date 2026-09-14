@@ -28,32 +28,34 @@ The FP32 engine and the FP32 PyTorch baseline both have TF32 disabled, so FP32 m
 
 | backend | seconds per volume (median) | speedup vs PyTorch FP32 | kidney Dice (95% CI) | tumor Dice (95% CI) | voxels changed vs validated config |
 |---|---|---|---|---|---|
-| PyTorch FP32 | 3.142 | 1.00x | 0.9201 (0.8901 to 0.9446) | 0.6687 (0.5736 to 0.7534) | 459 |
-| PyTorch AMP (validated) | 1.344 | 2.34x | 0.9201 (0.8901 to 0.9446) | 0.6687 (0.5736 to 0.7534) | 0 |
-| TensorRT FP32 | 1.299 | 2.42x | 0.9201 (0.8901 to 0.9446) | 0.6687 (0.5736 to 0.7534) | 459 |
-| **TensorRT FP16** | **0.360** | **8.72x** | 0.9201 (0.8901 to 0.9446) | 0.6688 (0.5738 to 0.7534) | 758 |
+| PyTorch FP32 | 3.251 | 1.00x | 0.9201 (0.8901 to 0.9446) | 0.6687 (0.5736 to 0.7534) | 459 |
+| PyTorch AMP (validated) | 1.397 | 2.33x | 0.9201 (0.8901 to 0.9446) | 0.6687 (0.5736 to 0.7534) | 0 |
+| TensorRT FP32 | 1.364 | 2.38x | 0.9201 (0.8901 to 0.9446) | 0.6687 (0.5736 to 0.7534) | 459 |
+| **TensorRT FP16** | **0.373** | **8.71x** | 0.9201 (0.8901 to 0.9446) | 0.6687 (0.5737 to 0.7534) | 768 |
 
-Mean HD95 is 14.2 mm for kidney and 37.4 mm for tumor on every backend. Across all 32 volumes the
-largest per case Dice change for TensorRT FP16 is 0.0001 on kidney and 0.0006 on tumor, and its
+Mean HD95 is 21.3 mm for kidney and 56.1 mm for tumor on every backend. (An earlier version of this
+page said 14.2 and 37.4: those were in 1.5 mm voxel units because the metric was called without
+the voxel spacing. Fixed in `src/deploy_tensorrt.py` and `src/evaluate.py`.) Across all 32 volumes the
+largest per case Dice change for TensorRT FP16 is 0.0001 on kidney and 0.0012 on tumor, and its
 lowest per volume voxel agreement with the validated configuration is 0.999992.
 
 | engine | build time | plan size |
 |---|---|---|
-| FP32 | 23.6 s | 20.6 MB |
-| FP16 | 19.4 s | 10.2 MB |
+| FP32 | 24.2 s | 20.8 MB |
+| FP16 | 18.0 s | 10.2 MB |
 
 ## What the numbers say
 
 **FP16 is 3.7x faster than the configuration that was actually validated, at the same Dice.** The
 honest comparison is not against FP32 eager, which nobody deploys, but against mixed precision
-PyTorch. TensorRT FP16 takes a whole abdominal CT from 1.34 s to 0.36 s and the tumor class,
-the minority and clinically important one, moves by one ten thousandth of a Dice point on average.
+PyTorch. TensorRT FP16 takes a whole abdominal CT from 1.40 s to 0.37 s and the mean Dice of the tumor
+class, the minority and clinically important one, does not move at four decimal places.
 
 **TensorRT FP32 reproduces PyTorch FP32 voxel for voxel.** Both differ from the AMP baseline in
 the same 459 voxels. That is a useful check that the ONNX export and engine are faithful, and a
 reminder that the validated AMP numbers were themselves not bit identical to FP32.
 
-**TensorRT at FP32 buys almost nothing over AMP.** 1.30 s against 1.34 s. Without the precision
+**TensorRT at FP32 buys almost nothing over AMP.** 1.36 s against 1.40 s. Without the precision
 change, graph fusion alone did not move this model much; the speed comes from FP16 kernels.
 
 **Per class numbers are the acceptance test, not the mean.** On a chest X-ray classifier in a

@@ -1,0 +1,2006 @@
+{
+ "n_cases": 32,
+ "smoothing": {
+  "filter": "vtkWindowedSincPolyDataFilter",
+  "iterations": 20,
+  "passband": 0.01
+ },
+ "kidney": {
+  "meshes": 64,
+  "closed_manifold_meshes": 58,
+  "reference_raw_mesh_volume_error_pct_vs_voxels": {
+   "mean": -0.068,
+   "min": -0.241,
+   "max": 0.045
+  },
+  "reference_smoothed_mesh_volume_error_pct_vs_voxels": {
+   "mean": -0.049,
+   "min": -0.367,
+   "max": 0.196
+  },
+  "reference_area_change_pct_raw_to_smoothed": -12.89,
+  "cases_with_both_meshes": 32,
+  "mesh_hd95_mean_mm": 21.22,
+  "monai_voxel_hd95_mean_mm": 21.31,
+  "hd95_mesh_minus_voxel_median_mm": -0.04,
+  "hd95_pearson_r": 1.0,
+  "mean_surface_distance_mean_mm": 2.41,
+  "median_seconds_meshing": 0.41
+ },
+ "tumor": {
+  "meshes": 64,
+  "closed_manifold_meshes": 60,
+  "reference_raw_mesh_volume_error_pct_vs_voxels": {
+   "mean": -0.584,
+   "min": -1.998,
+   "max": -0.031
+  },
+  "reference_smoothed_mesh_volume_error_pct_vs_voxels": {
+   "mean": -0.875,
+   "min": -3.107,
+   "max": -0.049
+  },
+  "reference_area_change_pct_raw_to_smoothed": -11.84,
+  "cases_with_both_meshes": 32,
+  "mesh_hd95_mean_mm": 69.01,
+  "monai_voxel_hd95_mean_mm": 56.09,
+  "hd95_mesh_minus_voxel_median_mm": 0.29,
+  "hd95_pearson_r": 0.804,
+  "mean_surface_distance_mean_mm": 11.77,
+  "median_seconds_meshing": 0.14500000000000002
+ },
+ "cases": [
+  {
+   "patient_id": "KiTS-00037",
+   "kidney": {
+    "reference_voxel_ml": 1021.791,
+    "prediction_voxel_ml": 585.428,
+    "reference": {
+     "raw_volume_ml": 1021.305,
+     "smoothed_volume_ml": 1021.295,
+     "raw_area_cm2": 1075.77,
+     "smoothed_area_cm2": 931.26,
+     "triangles": 119080,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 7
+    },
+    "prediction": {
+     "raw_volume_ml": 584.312,
+     "smoothed_volume_ml": 584.572,
+     "raw_area_cm2": 681.88,
+     "smoothed_area_cm2": 616.59,
+     "triangles": 84492,
+     "open_or_non_manifold_edges": 16,
+     "connected_components": 7
+    },
+    "seconds_meshing": 0.61,
+    "mesh_symmetric_mean_surface_distance_mm": 8.088,
+    "mesh_symmetric_hd95_mm": 57.689,
+    "mesh_hd95_max_of_directed_mm": 64.834,
+    "mesh_hausdorff_mm": 212.185,
+    "seconds_distance": 3.34,
+    "monai_voxel_hd95_mm": 65.09
+   },
+   "tumor": {
+    "reference_voxel_ml": 5.94,
+    "prediction_voxel_ml": 430.653,
+    "reference": {
+     "raw_volume_ml": 5.879,
+     "smoothed_volume_ml": 5.86,
+     "raw_area_cm2": 20.03,
+     "smoothed_area_cm2": 17.69,
+     "triangles": 2172,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 423.232,
+     "smoothed_volume_ml": 423.059,
+     "raw_area_cm2": 324.03,
+     "smoothed_area_cm2": 296.27,
+     "triangles": 40278,
+     "open_or_non_manifold_edges": 20,
+     "connected_components": 5
+    },
+    "seconds_meshing": 0.2,
+    "mesh_symmetric_mean_surface_distance_mm": 49.954,
+    "mesh_symmetric_hd95_mm": 82.196,
+    "mesh_hd95_max_of_directed_mm": 82.379,
+    "mesh_hausdorff_mm": 240.563,
+    "seconds_distance": 0.9,
+    "monai_voxel_hd95_mm": 82.39
+   }
+  },
+  {
+   "patient_id": "KiTS-00205",
+   "kidney": {
+    "reference_voxel_ml": 316.737,
+    "prediction_voxel_ml": 314.452,
+    "reference": {
+     "raw_volume_ml": 316.549,
+     "smoothed_volume_ml": 316.657,
+     "raw_area_cm2": 464.97,
+     "smoothed_area_cm2": 406.22,
+     "triangles": 51896,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 8
+    },
+    "prediction": {
+     "raw_volume_ml": 314.198,
+     "smoothed_volume_ml": 314.202,
+     "raw_area_cm2": 394.47,
+     "smoothed_area_cm2": 358.32,
+     "triangles": 48292,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 10
+    },
+    "seconds_meshing": 0.6,
+    "mesh_symmetric_mean_surface_distance_mm": 0.884,
+    "mesh_symmetric_hd95_mm": 3.397,
+    "mesh_hd95_max_of_directed_mm": 4.923,
+    "mesh_hausdorff_mm": 15.6,
+    "seconds_distance": 1.14,
+    "monai_voxel_hd95_mm": 4.97
+   },
+   "tumor": {
+    "reference_voxel_ml": 12.896,
+    "prediction_voxel_ml": 5.64,
+    "reference": {
+     "raw_volume_ml": 12.773,
+     "smoothed_volume_ml": 12.706,
+     "raw_area_cm2": 41.83,
+     "smoothed_area_cm2": 37.32,
+     "triangles": 4452,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 2
+    },
+    "prediction": {
+     "raw_volume_ml": 5.528,
+     "smoothed_volume_ml": 5.445,
+     "raw_area_cm2": 25.13,
+     "smoothed_area_cm2": 22.66,
+     "triangles": 3116,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 3
+    },
+    "seconds_meshing": 0.21,
+    "mesh_symmetric_mean_surface_distance_mm": 9.301,
+    "mesh_symmetric_hd95_mm": 15.759,
+    "mesh_hd95_max_of_directed_mm": 128.204,
+    "mesh_hausdorff_mm": 132.437,
+    "seconds_distance": 0.24,
+    "monai_voxel_hd95_mm": 128.08
+   }
+  },
+  {
+   "patient_id": "KiTS-00100",
+   "kidney": {
+    "reference_voxel_ml": 308.421,
+    "prediction_voxel_ml": 301.793,
+    "reference": {
+     "raw_volume_ml": 308.383,
+     "smoothed_volume_ml": 308.739,
+     "raw_area_cm2": 415.1,
+     "smoothed_area_cm2": 366.83,
+     "triangles": 50528,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 8
+    },
+    "prediction": {
+     "raw_volume_ml": 301.793,
+     "smoothed_volume_ml": 302.139,
+     "raw_area_cm2": 413.55,
+     "smoothed_area_cm2": 372.09,
+     "triangles": 50844,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 10
+    },
+    "seconds_meshing": 0.36,
+    "mesh_symmetric_mean_surface_distance_mm": 0.44,
+    "mesh_symmetric_hd95_mm": 1.315,
+    "mesh_hd95_max_of_directed_mm": 1.434,
+    "mesh_hausdorff_mm": 11.76,
+    "seconds_distance": 0.49,
+    "monai_voxel_hd95_mm": 1.5
+   },
+   "tumor": {
+    "reference_voxel_ml": 2.663,
+    "prediction_voxel_ml": 2.94,
+    "reference": {
+     "raw_volume_ml": 2.616,
+     "smoothed_volume_ml": 2.591,
+     "raw_area_cm2": 10.93,
+     "smoothed_area_cm2": 9.85,
+     "triangles": 1316,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 2.889,
+     "smoothed_volume_ml": 2.85,
+     "raw_area_cm2": 13.11,
+     "smoothed_area_cm2": 11.78,
+     "triangles": 1616,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "seconds_meshing": 0.13,
+    "mesh_symmetric_mean_surface_distance_mm": 3.077,
+    "mesh_symmetric_hd95_mm": 9.573,
+    "mesh_hd95_max_of_directed_mm": 10.649,
+    "mesh_hausdorff_mm": 11.873,
+    "seconds_distance": 0.02,
+    "monai_voxel_hd95_mm": 10.19
+   }
+  },
+  {
+   "patient_id": "KiTS-00085",
+   "kidney": {
+    "reference_voxel_ml": 414.879,
+    "prediction_voxel_ml": 416.627,
+    "reference": {
+     "raw_volume_ml": 414.743,
+     "smoothed_volume_ml": 415.029,
+     "raw_area_cm2": 566.51,
+     "smoothed_area_cm2": 490.54,
+     "triangles": 63640,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 9
+    },
+    "prediction": {
+     "raw_volume_ml": 416.516,
+     "smoothed_volume_ml": 416.748,
+     "raw_area_cm2": 499.24,
+     "smoothed_area_cm2": 451.03,
+     "triangles": 61368,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 8
+    },
+    "seconds_meshing": 0.41,
+    "mesh_symmetric_mean_surface_distance_mm": 0.606,
+    "mesh_symmetric_hd95_mm": 1.716,
+    "mesh_hd95_max_of_directed_mm": 2.057,
+    "mesh_hausdorff_mm": 13.773,
+    "seconds_distance": 0.68,
+    "monai_voxel_hd95_mm": 2.12
+   },
+   "tumor": {
+    "reference_voxel_ml": 8.029,
+    "prediction_voxel_ml": 2.238,
+    "reference": {
+     "raw_volume_ml": 7.955,
+     "smoothed_volume_ml": 7.913,
+     "raw_area_cm2": 25.4,
+     "smoothed_area_cm2": 22.41,
+     "triangles": 2764,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 2.196,
+     "smoothed_volume_ml": 2.172,
+     "raw_area_cm2": 10.11,
+     "smoothed_area_cm2": 9.04,
+     "triangles": 1236,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "seconds_meshing": 0.11,
+    "mesh_symmetric_mean_surface_distance_mm": 4.711,
+    "mesh_symmetric_hd95_mm": 12.062,
+    "mesh_hd95_max_of_directed_mm": 12.42,
+    "mesh_hausdorff_mm": 14.491,
+    "seconds_distance": 0.04,
+    "monai_voxel_hd95_mm": 12.09
+   }
+  },
+  {
+   "patient_id": "KiTS-00196",
+   "kidney": {
+    "reference_voxel_ml": 454.353,
+    "prediction_voxel_ml": 456.077,
+    "reference": {
+     "raw_volume_ml": 454.042,
+     "smoothed_volume_ml": 454.134,
+     "raw_area_cm2": 520.49,
+     "smoothed_area_cm2": 454.8,
+     "triangles": 59964,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 18
+    },
+    "prediction": {
+     "raw_volume_ml": 455.795,
+     "smoothed_volume_ml": 455.882,
+     "raw_area_cm2": 482.03,
+     "smoothed_area_cm2": 436.23,
+     "triangles": 59036,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 14
+    },
+    "seconds_meshing": 0.42,
+    "mesh_symmetric_mean_surface_distance_mm": 0.605,
+    "mesh_symmetric_hd95_mm": 1.923,
+    "mesh_hd95_max_of_directed_mm": 2.016,
+    "mesh_hausdorff_mm": 15.51,
+    "seconds_distance": 0.63,
+    "monai_voxel_hd95_mm": 2.12
+   },
+   "tumor": {
+    "reference_voxel_ml": 44.132,
+    "prediction_voxel_ml": 39.197,
+    "reference": {
+     "raw_volume_ml": 44.007,
+     "smoothed_volume_ml": 43.955,
+     "raw_area_cm2": 78.27,
+     "smoothed_area_cm2": 68.4,
+     "triangles": 8940,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 39.09,
+     "smoothed_volume_ml": 39.045,
+     "raw_area_cm2": 68.12,
+     "smoothed_area_cm2": 62.3,
+     "triangles": 8272,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "seconds_meshing": 0.17,
+    "mesh_symmetric_mean_surface_distance_mm": 1.274,
+    "mesh_symmetric_hd95_mm": 4.708,
+    "mesh_hd95_max_of_directed_mm": 5.287,
+    "mesh_hausdorff_mm": 9.113,
+    "seconds_distance": 0.12,
+    "monai_voxel_hd95_mm": 4.97
+   }
+  },
+  {
+   "patient_id": "KiTS-00167",
+   "kidney": {
+    "reference_voxel_ml": 490.485,
+    "prediction_voxel_ml": 482.247,
+    "reference": {
+     "raw_volume_ml": 490.076,
+     "smoothed_volume_ml": 490.068,
+     "raw_area_cm2": 570.44,
+     "smoothed_area_cm2": 497.72,
+     "triangles": 63280,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 11
+    },
+    "prediction": {
+     "raw_volume_ml": 481.936,
+     "smoothed_volume_ml": 481.985,
+     "raw_area_cm2": 519.05,
+     "smoothed_area_cm2": 468.91,
+     "triangles": 63608,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 16
+    },
+    "seconds_meshing": 0.64,
+    "mesh_symmetric_mean_surface_distance_mm": 1.425,
+    "mesh_symmetric_hd95_mm": 2.112,
+    "mesh_hd95_max_of_directed_mm": 2.186,
+    "mesh_hausdorff_mm": 160.93,
+    "seconds_distance": 0.96,
+    "monai_voxel_hd95_mm": 2.12
+   },
+   "tumor": {
+    "reference_voxel_ml": 7.627,
+    "prediction_voxel_ml": 4.367,
+    "reference": {
+     "raw_volume_ml": 7.552,
+     "smoothed_volume_ml": 7.514,
+     "raw_area_cm2": 25.16,
+     "smoothed_area_cm2": 22.57,
+     "triangles": 2652,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 4.318,
+     "smoothed_volume_ml": 4.293,
+     "raw_area_cm2": 14.79,
+     "smoothed_area_cm2": 13.36,
+     "triangles": 1820,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "seconds_meshing": 0.24,
+    "mesh_symmetric_mean_surface_distance_mm": 2.557,
+    "mesh_symmetric_hd95_mm": 7.458,
+    "mesh_hd95_max_of_directed_mm": 8.799,
+    "mesh_hausdorff_mm": 11.986,
+    "seconds_distance": 0.07,
+    "monai_voxel_hd95_mm": 8.62
+   }
+  },
+  {
+   "patient_id": "KiTS-00064",
+   "kidney": {
+    "reference_voxel_ml": 293.797,
+    "prediction_voxel_ml": 293.294,
+    "reference": {
+     "raw_volume_ml": 293.714,
+     "smoothed_volume_ml": 294.037,
+     "raw_area_cm2": 438.39,
+     "smoothed_area_cm2": 382.13,
+     "triangles": 49124,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 13
+    },
+    "prediction": {
+     "raw_volume_ml": 292.344,
+     "smoothed_volume_ml": 292.87,
+     "raw_area_cm2": 394.14,
+     "smoothed_area_cm2": 355.01,
+     "triangles": 47876,
+     "open_or_non_manifold_edges": 14,
+     "connected_components": 11
+    },
+    "seconds_meshing": 0.52,
+    "mesh_symmetric_mean_surface_distance_mm": 0.8,
+    "mesh_symmetric_hd95_mm": 2.304,
+    "mesh_hd95_max_of_directed_mm": 2.602,
+    "mesh_hausdorff_mm": 101.877,
+    "seconds_distance": 1.05,
+    "monai_voxel_hd95_mm": 2.92
+   },
+   "tumor": {
+    "reference_voxel_ml": 9.902,
+    "prediction_voxel_ml": 1.171,
+    "reference": {
+     "raw_volume_ml": 9.831,
+     "smoothed_volume_ml": 9.8,
+     "raw_area_cm2": 28.18,
+     "smoothed_area_cm2": 25.24,
+     "triangles": 3056,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 1.112,
+     "smoothed_volume_ml": 1.053,
+     "raw_area_cm2": 7.41,
+     "smoothed_area_cm2": 6.26,
+     "triangles": 900,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 4
+    },
+    "seconds_meshing": 0.11,
+    "mesh_symmetric_mean_surface_distance_mm": 16.685,
+    "mesh_symmetric_hd95_mm": 117.927,
+    "mesh_hd95_max_of_directed_mm": 185.145,
+    "mesh_hausdorff_mm": 186.472,
+    "seconds_distance": 0.09,
+    "monai_voxel_hd95_mm": 121.73
+   }
+  },
+  {
+   "patient_id": "KiTS-00202",
+   "kidney": {
+    "reference_voxel_ml": 367.622,
+    "prediction_voxel_ml": 362.242,
+    "reference": {
+     "raw_volume_ml": 367.39,
+     "smoothed_volume_ml": 367.461,
+     "raw_area_cm2": 432.93,
+     "smoothed_area_cm2": 380.3,
+     "triangles": 52464,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 27
+    },
+    "prediction": {
+     "raw_volume_ml": 362.061,
+     "smoothed_volume_ml": 362.211,
+     "raw_area_cm2": 429.78,
+     "smoothed_area_cm2": 387.56,
+     "triangles": 52808,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 15
+    },
+    "seconds_meshing": 0.38,
+    "mesh_symmetric_mean_surface_distance_mm": 0.542,
+    "mesh_symmetric_hd95_mm": 1.789,
+    "mesh_hd95_max_of_directed_mm": 2.207,
+    "mesh_hausdorff_mm": 10.955,
+    "seconds_distance": 0.44,
+    "monai_voxel_hd95_mm": 2.12
+   },
+   "tumor": {
+    "reference_voxel_ml": 117.109,
+    "prediction_voxel_ml": 85.445,
+    "reference": {
+     "raw_volume_ml": 116.937,
+     "smoothed_volume_ml": 116.866,
+     "raw_area_cm2": 146.43,
+     "smoothed_area_cm2": 129.68,
+     "triangles": 17204,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 85.273,
+     "smoothed_volume_ml": 85.162,
+     "raw_area_cm2": 138.33,
+     "smoothed_area_cm2": 121.88,
+     "triangles": 16884,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 4
+    },
+    "seconds_meshing": 0.19,
+    "mesh_symmetric_mean_surface_distance_mm": 3.175,
+    "mesh_symmetric_hd95_mm": 13.297,
+    "mesh_hd95_max_of_directed_mm": 15.191,
+    "mesh_hausdorff_mm": 21.602,
+    "seconds_distance": 0.37,
+    "monai_voxel_hd95_mm": 14.15
+   }
+  },
+  {
+   "patient_id": "KiTS-00168",
+   "kidney": {
+    "reference_voxel_ml": 257.188,
+    "prediction_voxel_ml": 253.213,
+    "reference": {
+     "raw_volume_ml": 256.884,
+     "smoothed_volume_ml": 256.849,
+     "raw_area_cm2": 378.21,
+     "smoothed_area_cm2": 328.85,
+     "triangles": 42528,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 8
+    },
+    "prediction": {
+     "raw_volume_ml": 252.888,
+     "smoothed_volume_ml": 252.797,
+     "raw_area_cm2": 345.08,
+     "smoothed_area_cm2": 313.68,
+     "triangles": 42316,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 6
+    },
+    "seconds_meshing": 0.24,
+    "mesh_symmetric_mean_surface_distance_mm": 0.828,
+    "mesh_symmetric_hd95_mm": 2.894,
+    "mesh_hd95_max_of_directed_mm": 3.197,
+    "mesh_hausdorff_mm": 11.785,
+    "seconds_distance": 0.42,
+    "monai_voxel_hd95_mm": 3.0
+   },
+   "tumor": {
+    "reference_voxel_ml": 33.682,
+    "prediction_voxel_ml": 28.087,
+    "reference": {
+     "raw_volume_ml": 33.577,
+     "smoothed_volume_ml": 33.542,
+     "raw_area_cm2": 63.87,
+     "smoothed_area_cm2": 56.75,
+     "triangles": 6892,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 27.99,
+     "smoothed_volume_ml": 27.95,
+     "raw_area_cm2": 51.66,
+     "smoothed_area_cm2": 47.29,
+     "triangles": 6468,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "seconds_meshing": 0.12,
+    "mesh_symmetric_mean_surface_distance_mm": 1.944,
+    "mesh_symmetric_hd95_mm": 6.61,
+    "mesh_hd95_max_of_directed_mm": 8.19,
+    "mesh_hausdorff_mm": 14.637,
+    "seconds_distance": 0.1,
+    "monai_voxel_hd95_mm": 7.79
+   }
+  },
+  {
+   "patient_id": "KiTS-00080",
+   "kidney": {
+    "reference_voxel_ml": 406.299,
+    "prediction_voxel_ml": 411.227,
+    "reference": {
+     "raw_volume_ml": 406.101,
+     "smoothed_volume_ml": 406.334,
+     "raw_area_cm2": 585.18,
+     "smoothed_area_cm2": 510.45,
+     "triangles": 65340,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 6
+    },
+    "prediction": {
+     "raw_volume_ml": 411.017,
+     "smoothed_volume_ml": 411.164,
+     "raw_area_cm2": 518.44,
+     "smoothed_area_cm2": 470.11,
+     "triangles": 62700,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 8
+    },
+    "seconds_meshing": 0.36,
+    "mesh_symmetric_mean_surface_distance_mm": 0.587,
+    "mesh_symmetric_hd95_mm": 1.948,
+    "mesh_hd95_max_of_directed_mm": 2.304,
+    "mesh_hausdorff_mm": 8.174,
+    "seconds_distance": 0.6,
+    "monai_voxel_hd95_mm": 2.12
+   },
+   "tumor": {
+    "reference_voxel_ml": 40.473,
+    "prediction_voxel_ml": 34.705,
+    "reference": {
+     "raw_volume_ml": 40.357,
+     "smoothed_volume_ml": 40.318,
+     "raw_area_cm2": 72.3,
+     "smoothed_area_cm2": 63.91,
+     "triangles": 7952,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 34.607,
+     "smoothed_volume_ml": 34.571,
+     "raw_area_cm2": 57.77,
+     "smoothed_area_cm2": 53.11,
+     "triangles": 6968,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 2
+    },
+    "seconds_meshing": 0.1,
+    "mesh_symmetric_mean_surface_distance_mm": 2.125,
+    "mesh_symmetric_hd95_mm": 4.703,
+    "mesh_hd95_max_of_directed_mm": 5.178,
+    "mesh_hausdorff_mm": 352.917,
+    "seconds_distance": 0.14,
+    "monai_voxel_hd95_mm": 4.74
+   }
+  },
+  {
+   "patient_id": "KiTS-00003",
+   "kidney": {
+    "reference_voxel_ml": 393.815,
+    "prediction_voxel_ml": 396.481,
+    "reference": {
+     "raw_volume_ml": 393.527,
+     "smoothed_volume_ml": 393.563,
+     "raw_area_cm2": 458.36,
+     "smoothed_area_cm2": 406.87,
+     "triangles": 55604,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 15
+    },
+    "prediction": {
+     "raw_volume_ml": 396.213,
+     "smoothed_volume_ml": 396.263,
+     "raw_area_cm2": 439.34,
+     "smoothed_area_cm2": 399.19,
+     "triangles": 53928,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 12
+    },
+    "seconds_meshing": 0.3,
+    "mesh_symmetric_mean_surface_distance_mm": 0.387,
+    "mesh_symmetric_hd95_mm": 1.155,
+    "mesh_hd95_max_of_directed_mm": 1.27,
+    "mesh_hausdorff_mm": 13.641,
+    "seconds_distance": 0.42,
+    "monai_voxel_hd95_mm": 1.5
+   },
+   "tumor": {
+    "reference_voxel_ml": 10.196,
+    "prediction_voxel_ml": 9.787,
+    "reference": {
+     "raw_volume_ml": 10.128,
+     "smoothed_volume_ml": 10.099,
+     "raw_area_cm2": 27.05,
+     "smoothed_area_cm2": 24.03,
+     "triangles": 3248,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 9.724,
+     "smoothed_volume_ml": 9.697,
+     "raw_area_cm2": 24.96,
+     "smoothed_area_cm2": 22.74,
+     "triangles": 3084,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "seconds_meshing": 0.08,
+    "mesh_symmetric_mean_surface_distance_mm": 0.735,
+    "mesh_symmetric_hd95_mm": 2.51,
+    "mesh_hd95_max_of_directed_mm": 2.829,
+    "mesh_hausdorff_mm": 3.92,
+    "seconds_distance": 0.03,
+    "monai_voxel_hd95_mm": 2.6
+   }
+  },
+  {
+   "patient_id": "KiTS-00104",
+   "kidney": {
+    "reference_voxel_ml": 352.046,
+    "prediction_voxel_ml": 370.288,
+    "reference": {
+     "raw_volume_ml": 351.912,
+     "smoothed_volume_ml": 352.137,
+     "raw_area_cm2": 505.98,
+     "smoothed_area_cm2": 437.24,
+     "triangles": 56264,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 17
+    },
+    "prediction": {
+     "raw_volume_ml": 370.167,
+     "smoothed_volume_ml": 370.38,
+     "raw_area_cm2": 465.53,
+     "smoothed_area_cm2": 418.99,
+     "triangles": 57936,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 23
+    },
+    "seconds_meshing": 0.35,
+    "mesh_symmetric_mean_surface_distance_mm": 1.135,
+    "mesh_symmetric_hd95_mm": 4.924,
+    "mesh_hd95_max_of_directed_mm": 6.045,
+    "mesh_hausdorff_mm": 341.312,
+    "seconds_distance": 0.81,
+    "monai_voxel_hd95_mm": 6.0
+   },
+   "tumor": {
+    "reference_voxel_ml": 66.315,
+    "prediction_voxel_ml": 45.562,
+    "reference": {
+     "raw_volume_ml": 66.09,
+     "smoothed_volume_ml": 65.965,
+     "raw_area_cm2": 132.71,
+     "smoothed_area_cm2": 116.6,
+     "triangles": 14300,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 2
+    },
+    "prediction": {
+     "raw_volume_ml": 45.415,
+     "smoothed_volume_ml": 45.352,
+     "raw_area_cm2": 76.89,
+     "smoothed_area_cm2": 70.62,
+     "triangles": 9504,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 2
+    },
+    "seconds_meshing": 0.23,
+    "mesh_symmetric_mean_surface_distance_mm": 3.096,
+    "mesh_symmetric_hd95_mm": 9.895,
+    "mesh_hd95_max_of_directed_mm": 13.316,
+    "mesh_hausdorff_mm": 23.074,
+    "seconds_distance": 0.31,
+    "monai_voxel_hd95_mm": 13.5
+   }
+  },
+  {
+   "patient_id": "KiTS-00042",
+   "kidney": {
+    "reference_voxel_ml": 363.609,
+    "prediction_voxel_ml": 413.637,
+    "reference": {
+     "raw_volume_ml": 363.282,
+     "smoothed_volume_ml": 363.334,
+     "raw_area_cm2": 537.31,
+     "smoothed_area_cm2": 471.59,
+     "triangles": 65620,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 19
+    },
+    "prediction": {
+     "raw_volume_ml": 418.569,
+     "smoothed_volume_ml": 418.247,
+     "raw_area_cm2": 513.63,
+     "smoothed_area_cm2": 460.13,
+     "triangles": 64300,
+     "open_or_non_manifold_edges": 26,
+     "connected_components": 25
+    },
+    "seconds_meshing": 0.69,
+    "mesh_symmetric_mean_surface_distance_mm": 2.946,
+    "mesh_symmetric_hd95_mm": 6.089,
+    "mesh_hd95_max_of_directed_mm": 6.562,
+    "mesh_hausdorff_mm": 196.97,
+    "seconds_distance": 2.07,
+    "monai_voxel_hd95_mm": 6.18
+   },
+   "tumor": {
+    "reference_voxel_ml": 1420.335,
+    "prediction_voxel_ml": 1132.643,
+    "reference": {
+     "raw_volume_ml": 1419.888,
+     "smoothed_volume_ml": 1419.58,
+     "raw_area_cm2": 792.25,
+     "smoothed_area_cm2": 690.06,
+     "triangles": 96288,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 11
+    },
+    "prediction": {
+     "raw_volume_ml": 1132.771,
+     "smoothed_volume_ml": 1133.069,
+     "raw_area_cm2": 824.55,
+     "smoothed_area_cm2": 723.75,
+     "triangles": 101496,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 45
+    },
+    "seconds_meshing": 1.0,
+    "mesh_symmetric_mean_surface_distance_mm": 6.887,
+    "mesh_symmetric_hd95_mm": 34.829,
+    "mesh_hd95_max_of_directed_mm": 41.266,
+    "mesh_hausdorff_mm": 111.326,
+    "seconds_distance": 4.93,
+    "monai_voxel_hd95_mm": 39.63
+   }
+  },
+  {
+   "patient_id": "KiTS-00013",
+   "kidney": {
+    "reference_voxel_ml": 275.994,
+    "prediction_voxel_ml": 273.868,
+    "reference": {
+     "raw_volume_ml": 275.585,
+     "smoothed_volume_ml": 275.381,
+     "raw_area_cm2": 391.77,
+     "smoothed_area_cm2": 342.33,
+     "triangles": 45248,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 10
+    },
+    "prediction": {
+     "raw_volume_ml": 273.57,
+     "smoothed_volume_ml": 273.519,
+     "raw_area_cm2": 374.85,
+     "smoothed_area_cm2": 340.44,
+     "triangles": 45860,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 8
+    },
+    "seconds_meshing": 0.27,
+    "mesh_symmetric_mean_surface_distance_mm": 0.79,
+    "mesh_symmetric_hd95_mm": 2.562,
+    "mesh_hd95_max_of_directed_mm": 2.843,
+    "mesh_hausdorff_mm": 22.157,
+    "seconds_distance": 0.52,
+    "monai_voxel_hd95_mm": 3.0
+   },
+   "tumor": {
+    "reference_voxel_ml": 39.238,
+    "prediction_voxel_ml": 36.045,
+    "reference": {
+     "raw_volume_ml": 39.124,
+     "smoothed_volume_ml": 39.082,
+     "raw_area_cm2": 68.82,
+     "smoothed_area_cm2": 59.53,
+     "triangles": 7868,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 35.947,
+     "smoothed_volume_ml": 35.906,
+     "raw_area_cm2": 59.49,
+     "smoothed_area_cm2": 54.69,
+     "triangles": 7380,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "seconds_meshing": 0.08,
+    "mesh_symmetric_mean_surface_distance_mm": 1.638,
+    "mesh_symmetric_hd95_mm": 3.814,
+    "mesh_hd95_max_of_directed_mm": 3.846,
+    "mesh_hausdorff_mm": 6.959,
+    "seconds_distance": 0.11,
+    "monai_voxel_hd95_mm": 3.67
+   }
+  },
+  {
+   "patient_id": "KiTS-00061",
+   "kidney": {
+    "reference_voxel_ml": 595.296,
+    "prediction_voxel_ml": 583.696,
+    "reference": {
+     "raw_volume_ml": 594.76,
+     "smoothed_volume_ml": 594.48,
+     "raw_area_cm2": 677.21,
+     "smoothed_area_cm2": 589.54,
+     "triangles": 74076,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 12
+    },
+    "prediction": {
+     "raw_volume_ml": 583.322,
+     "smoothed_volume_ml": 583.246,
+     "raw_area_cm2": 596.84,
+     "smoothed_area_cm2": 543.17,
+     "triangles": 73788,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 10
+    },
+    "seconds_meshing": 0.52,
+    "mesh_symmetric_mean_surface_distance_mm": 1.031,
+    "mesh_symmetric_hd95_mm": 3.937,
+    "mesh_hd95_max_of_directed_mm": 4.2,
+    "mesh_hausdorff_mm": 20.901,
+    "seconds_distance": 1.66,
+    "monai_voxel_hd95_mm": 4.24
+   },
+   "tumor": {
+    "reference_voxel_ml": 109.853,
+    "prediction_voxel_ml": 122.614,
+    "reference": {
+     "raw_volume_ml": 109.631,
+     "smoothed_volume_ml": 109.535,
+     "raw_area_cm2": 170.24,
+     "smoothed_area_cm2": 150.57,
+     "triangles": 18192,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 107.487,
+     "smoothed_volume_ml": 105.99,
+     "raw_area_cm2": 160.53,
+     "smoothed_area_cm2": 144.92,
+     "triangles": 19592,
+     "open_or_non_manifold_edges": 36,
+     "connected_components": 5
+    },
+    "seconds_meshing": 0.23,
+    "mesh_symmetric_mean_surface_distance_mm": 7.983,
+    "mesh_symmetric_hd95_mm": 67.723,
+    "mesh_hd95_max_of_directed_mm": 77.965,
+    "mesh_hausdorff_mm": 94.832,
+    "seconds_distance": 0.92,
+    "monai_voxel_hd95_mm": 77.19
+   }
+  },
+  {
+   "patient_id": "KiTS-00073",
+   "kidney": {
+    "reference_voxel_ml": 542.903,
+    "prediction_voxel_ml": 565.842,
+    "reference": {
+     "raw_volume_ml": 542.55,
+     "smoothed_volume_ml": 542.626,
+     "raw_area_cm2": 650.74,
+     "smoothed_area_cm2": 565.74,
+     "triangles": 71444,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 12
+    },
+    "prediction": {
+     "raw_volume_ml": 565.933,
+     "smoothed_volume_ml": 565.911,
+     "raw_area_cm2": 588.32,
+     "smoothed_area_cm2": 531.56,
+     "triangles": 72174,
+     "open_or_non_manifold_edges": 52,
+     "connected_components": 22
+    },
+    "seconds_meshing": 0.85,
+    "mesh_symmetric_mean_surface_distance_mm": 1.775,
+    "mesh_symmetric_hd95_mm": 5.822,
+    "mesh_hd95_max_of_directed_mm": 6.673,
+    "mesh_hausdorff_mm": 376.484,
+    "seconds_distance": 1.45,
+    "monai_voxel_hd95_mm": 6.36
+   },
+   "tumor": {
+    "reference_voxel_ml": 448.298,
+    "prediction_voxel_ml": 396.782,
+    "reference": {
+     "raw_volume_ml": 447.973,
+     "smoothed_volume_ml": 447.77,
+     "raw_area_cm2": 410.5,
+     "smoothed_area_cm2": 358.04,
+     "triangles": 44776,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 2
+    },
+    "prediction": {
+     "raw_volume_ml": 396.901,
+     "smoothed_volume_ml": 396.569,
+     "raw_area_cm2": 357.2,
+     "smoothed_area_cm2": 322.9,
+     "triangles": 44028,
+     "open_or_non_manifold_edges": 30,
+     "connected_components": 12
+    },
+    "seconds_meshing": 0.34,
+    "mesh_symmetric_mean_surface_distance_mm": 11.622,
+    "mesh_symmetric_hd95_mm": 11.827,
+    "mesh_hd95_max_of_directed_mm": 354.465,
+    "mesh_hausdorff_mm": 411.71,
+    "seconds_distance": 1.07,
+    "monai_voxel_hd95_mm": 14.7
+   }
+  },
+  {
+   "patient_id": "KiTS-00005",
+   "kidney": {
+    "reference_voxel_ml": 430.788,
+    "prediction_voxel_ml": 377.484,
+    "reference": {
+     "raw_volume_ml": 430.378,
+     "smoothed_volume_ml": 430.26,
+     "raw_area_cm2": 515.04,
+     "smoothed_area_cm2": 442.69,
+     "triangles": 61968,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 19
+    },
+    "prediction": {
+     "raw_volume_ml": 376.974,
+     "smoothed_volume_ml": 376.701,
+     "raw_area_cm2": 586.05,
+     "smoothed_area_cm2": 516.98,
+     "triangles": 71396,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 36
+    },
+    "seconds_meshing": 0.41,
+    "mesh_symmetric_mean_surface_distance_mm": 3.084,
+    "mesh_symmetric_hd95_mm": 14.681,
+    "mesh_hd95_max_of_directed_mm": 20.148,
+    "mesh_hausdorff_mm": 235.428,
+    "seconds_distance": 1.49,
+    "monai_voxel_hd95_mm": 19.74
+   },
+   "tumor": {
+    "reference_voxel_ml": 60.2,
+    "prediction_voxel_ml": 60.865,
+    "reference": {
+     "raw_volume_ml": 60.054,
+     "smoothed_volume_ml": 59.994,
+     "raw_area_cm2": 92.48,
+     "smoothed_area_cm2": 81.38,
+     "triangles": 11032,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 2
+    },
+    "prediction": {
+     "raw_volume_ml": 60.514,
+     "smoothed_volume_ml": 60.276,
+     "raw_area_cm2": 131.08,
+     "smoothed_area_cm2": 117.24,
+     "triangles": 15852,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 4
+    },
+    "seconds_meshing": 0.18,
+    "mesh_symmetric_mean_surface_distance_mm": 18.73,
+    "mesh_symmetric_hd95_mm": 80.774,
+    "mesh_hd95_max_of_directed_mm": 85.276,
+    "mesh_hausdorff_mm": 123.599,
+    "seconds_distance": 0.41,
+    "monai_voxel_hd95_mm": 83.92
+   }
+  },
+  {
+   "patient_id": "KiTS-00021",
+   "kidney": {
+    "reference_voxel_ml": 350.517,
+    "prediction_voxel_ml": 371.253,
+    "reference": {
+     "raw_volume_ml": 350.262,
+     "smoothed_volume_ml": 350.367,
+     "raw_area_cm2": 562.06,
+     "smoothed_area_cm2": 486.55,
+     "triangles": 62576,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 4
+    },
+    "prediction": {
+     "raw_volume_ml": 371.017,
+     "smoothed_volume_ml": 371.076,
+     "raw_area_cm2": 516.35,
+     "smoothed_area_cm2": 463.71,
+     "triangles": 63580,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 8
+    },
+    "seconds_meshing": 0.34,
+    "mesh_symmetric_mean_surface_distance_mm": 1.117,
+    "mesh_symmetric_hd95_mm": 4.473,
+    "mesh_hd95_max_of_directed_mm": 7.069,
+    "mesh_hausdorff_mm": 27.301,
+    "seconds_distance": 1.41,
+    "monai_voxel_hd95_mm": 6.87
+   },
+   "tumor": {
+    "reference_voxel_ml": 24.202,
+    "prediction_voxel_ml": 5.518,
+    "reference": {
+     "raw_volume_ml": 24.112,
+     "smoothed_volume_ml": 24.081,
+     "raw_area_cm2": 49.21,
+     "smoothed_area_cm2": 44.15,
+     "triangles": 5284,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 5.382,
+     "smoothed_volume_ml": 5.27,
+     "raw_area_cm2": 27.34,
+     "smoothed_area_cm2": 24.67,
+     "triangles": 3324,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 4
+    },
+    "seconds_meshing": 0.13,
+    "mesh_symmetric_mean_surface_distance_mm": 23.908,
+    "mesh_symmetric_hd95_mm": 141.896,
+    "mesh_hd95_max_of_directed_mm": 145.881,
+    "mesh_hausdorff_mm": 148.296,
+    "seconds_distance": 0.28,
+    "monai_voxel_hd95_mm": 145.73
+   }
+  },
+  {
+   "patient_id": "KiTS-00209",
+   "kidney": {
+    "reference_voxel_ml": 477.89,
+    "prediction_voxel_ml": 479.695,
+    "reference": {
+     "raw_volume_ml": 477.642,
+     "smoothed_volume_ml": 477.794,
+     "raw_area_cm2": 592.72,
+     "smoothed_area_cm2": 517.28,
+     "triangles": 66288,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 9
+    },
+    "prediction": {
+     "raw_volume_ml": 479.455,
+     "smoothed_volume_ml": 479.573,
+     "raw_area_cm2": 534.91,
+     "smoothed_area_cm2": 484.06,
+     "triangles": 65252,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 11
+    },
+    "seconds_meshing": 0.62,
+    "mesh_symmetric_mean_surface_distance_mm": 0.617,
+    "mesh_symmetric_hd95_mm": 1.877,
+    "mesh_hd95_max_of_directed_mm": 2.03,
+    "mesh_hausdorff_mm": 131.98,
+    "seconds_distance": 1.28,
+    "monai_voxel_hd95_mm": 2.12
+   },
+   "tumor": {
+    "reference_voxel_ml": 2.352,
+    "prediction_voxel_ml": 0.689,
+    "reference": {
+     "raw_volume_ml": 2.305,
+     "smoothed_volume_ml": 2.28,
+     "raw_area_cm2": 11.2,
+     "smoothed_area_cm2": 9.51,
+     "triangles": 1256,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 0.663,
+     "smoothed_volume_ml": 0.643,
+     "raw_area_cm2": 4.15,
+     "smoothed_area_cm2": 3.73,
+     "triangles": 520,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "seconds_meshing": 0.19,
+    "mesh_symmetric_mean_surface_distance_mm": 2.828,
+    "mesh_symmetric_hd95_mm": 5.662,
+    "mesh_hd95_max_of_directed_mm": 5.9,
+    "mesh_hausdorff_mm": 6.639,
+    "seconds_distance": 0.03,
+    "monai_voxel_hd95_mm": 6.0
+   }
+  },
+  {
+   "patient_id": "KiTS-00036",
+   "kidney": {
+    "reference_voxel_ml": 557.931,
+    "prediction_voxel_ml": 553.193,
+    "reference": {
+     "raw_volume_ml": 557.665,
+     "smoothed_volume_ml": 557.739,
+     "raw_area_cm2": 701.11,
+     "smoothed_area_cm2": 609.08,
+     "triangles": 80964,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 15
+    },
+    "prediction": {
+     "raw_volume_ml": 552.896,
+     "smoothed_volume_ml": 552.934,
+     "raw_area_cm2": 647.45,
+     "smoothed_area_cm2": 583.4,
+     "triangles": 79424,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 22
+    },
+    "seconds_meshing": 0.88,
+    "mesh_symmetric_mean_surface_distance_mm": 0.943,
+    "mesh_symmetric_hd95_mm": 4.407,
+    "mesh_hd95_max_of_directed_mm": 4.69,
+    "mesh_hausdorff_mm": 16.527,
+    "seconds_distance": 1.49,
+    "monai_voxel_hd95_mm": 4.5
+   },
+   "tumor": {
+    "reference_voxel_ml": 76.704,
+    "prediction_voxel_ml": 84.669,
+    "reference": {
+     "raw_volume_ml": 76.546,
+     "smoothed_volume_ml": 76.481,
+     "raw_area_cm2": 117.53,
+     "smoothed_area_cm2": 101.99,
+     "triangles": 13276,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 84.522,
+     "smoothed_volume_ml": 84.468,
+     "raw_area_cm2": 108.29,
+     "smoothed_area_cm2": 98.74,
+     "triangles": 13232,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 2
+    },
+    "seconds_meshing": 0.15,
+    "mesh_symmetric_mean_surface_distance_mm": 3.051,
+    "mesh_symmetric_hd95_mm": 7.78,
+    "mesh_hd95_max_of_directed_mm": 8.639,
+    "mesh_hausdorff_mm": 289.016,
+    "seconds_distance": 0.28,
+    "monai_voxel_hd95_mm": 8.62
+   }
+  },
+  {
+   "patient_id": "KiTS-00111",
+   "kidney": {
+    "reference_voxel_ml": 446.388,
+    "prediction_voxel_ml": 433.812,
+    "reference": {
+     "raw_volume_ml": 446.336,
+     "smoothed_volume_ml": 446.747,
+     "raw_area_cm2": 607.61,
+     "smoothed_area_cm2": 523.9,
+     "triangles": 71912,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 15
+    },
+    "prediction": {
+     "raw_volume_ml": 433.57,
+     "smoothed_volume_ml": 433.611,
+     "raw_area_cm2": 570.51,
+     "smoothed_area_cm2": 512.64,
+     "triangles": 70424,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 10
+    },
+    "seconds_meshing": 0.37,
+    "mesh_symmetric_mean_surface_distance_mm": 0.642,
+    "mesh_symmetric_hd95_mm": 2.105,
+    "mesh_hd95_max_of_directed_mm": 2.143,
+    "mesh_hausdorff_mm": 14.669,
+    "seconds_distance": 0.7,
+    "monai_voxel_hd95_mm": 2.12
+   },
+   "tumor": {
+    "reference_voxel_ml": 27.601,
+    "prediction_voxel_ml": 29.028,
+    "reference": {
+     "raw_volume_ml": 27.497,
+     "smoothed_volume_ml": 27.445,
+     "raw_area_cm2": 55.67,
+     "smoothed_area_cm2": 48.67,
+     "triangles": 6296,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 28.934,
+     "smoothed_volume_ml": 28.897,
+     "raw_area_cm2": 52.65,
+     "smoothed_area_cm2": 48.06,
+     "triangles": 6344,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "seconds_meshing": 0.11,
+    "mesh_symmetric_mean_surface_distance_mm": 1.767,
+    "mesh_symmetric_hd95_mm": 5.004,
+    "mesh_hd95_max_of_directed_mm": 5.158,
+    "mesh_hausdorff_mm": 9.32,
+    "seconds_distance": 0.1,
+    "monai_voxel_hd95_mm": 4.74
+   }
+  },
+  {
+   "patient_id": "KiTS-00140",
+   "kidney": {
+    "reference_voxel_ml": 494.343,
+    "prediction_voxel_ml": 478.423,
+    "reference": {
+     "raw_volume_ml": 494.011,
+     "smoothed_volume_ml": 494.028,
+     "raw_area_cm2": 539.81,
+     "smoothed_area_cm2": 480.03,
+     "triangles": 64988,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 17
+    },
+    "prediction": {
+     "raw_volume_ml": 478.19,
+     "smoothed_volume_ml": 478.218,
+     "raw_area_cm2": 538.64,
+     "smoothed_area_cm2": 488.36,
+     "triangles": 65808,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 20
+    },
+    "seconds_meshing": 0.35,
+    "mesh_symmetric_mean_surface_distance_mm": 0.73,
+    "mesh_symmetric_hd95_mm": 2.315,
+    "mesh_hd95_max_of_directed_mm": 4.665,
+    "mesh_hausdorff_mm": 15.698,
+    "seconds_distance": 0.66,
+    "monai_voxel_hd95_mm": 4.5
+   },
+   "tumor": {
+    "reference_voxel_ml": 5.062,
+    "prediction_voxel_ml": 12.953,
+    "reference": {
+     "raw_volume_ml": 5.002,
+     "smoothed_volume_ml": 4.969,
+     "raw_area_cm2": 17.9,
+     "smoothed_area_cm2": 15.91,
+     "triangles": 2160,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 12.833,
+     "smoothed_volume_ml": 12.768,
+     "raw_area_cm2": 39.0,
+     "smoothed_area_cm2": 35.43,
+     "triangles": 4812,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 2
+    },
+    "seconds_meshing": 0.08,
+    "mesh_symmetric_mean_surface_distance_mm": 58.787,
+    "mesh_symmetric_hd95_mm": 127.852,
+    "mesh_hd95_max_of_directed_mm": 130.143,
+    "mesh_hausdorff_mm": 136.631,
+    "seconds_distance": 0.06,
+    "monai_voxel_hd95_mm": 129.56
+   }
+  },
+  {
+   "patient_id": "KiTS-00152",
+   "kidney": {
+    "reference_voxel_ml": 389.06,
+    "prediction_voxel_ml": 389.573,
+    "reference": {
+     "raw_volume_ml": 388.772,
+     "smoothed_volume_ml": 388.785,
+     "raw_area_cm2": 524.53,
+     "smoothed_area_cm2": 455.31,
+     "triangles": 58744,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 4
+    },
+    "prediction": {
+     "raw_volume_ml": 389.324,
+     "smoothed_volume_ml": 389.384,
+     "raw_area_cm2": 462.61,
+     "smoothed_area_cm2": 419.36,
+     "triangles": 56736,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 4
+    },
+    "seconds_meshing": 0.28,
+    "mesh_symmetric_mean_surface_distance_mm": 0.58,
+    "mesh_symmetric_hd95_mm": 1.699,
+    "mesh_hd95_max_of_directed_mm": 1.849,
+    "mesh_hausdorff_mm": 10.948,
+    "seconds_distance": 0.51,
+    "monai_voxel_hd95_mm": 2.12
+   },
+   "tumor": {
+    "reference_voxel_ml": 9.791,
+    "prediction_voxel_ml": 10.004,
+    "reference": {
+     "raw_volume_ml": 9.721,
+     "smoothed_volume_ml": 9.698,
+     "raw_area_cm2": 28.06,
+     "smoothed_area_cm2": 24.69,
+     "triangles": 3068,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 9.942,
+     "smoothed_volume_ml": 9.917,
+     "raw_area_cm2": 24.92,
+     "smoothed_area_cm2": 23.2,
+     "triangles": 3060,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "seconds_meshing": 0.05,
+    "mesh_symmetric_mean_surface_distance_mm": 1.128,
+    "mesh_symmetric_hd95_mm": 3.293,
+    "mesh_hd95_max_of_directed_mm": 3.358,
+    "mesh_hausdorff_mm": 4.9,
+    "seconds_distance": 0.03,
+    "monai_voxel_hd95_mm": 3.35
+   }
+  },
+  {
+   "patient_id": "KiTS-00015",
+   "kidney": {
+    "reference_voxel_ml": 929.215,
+    "prediction_voxel_ml": 402.924,
+    "reference": {
+     "raw_volume_ml": 928.792,
+     "smoothed_volume_ml": 928.86,
+     "raw_area_cm2": 881.01,
+     "smoothed_area_cm2": 773.06,
+     "triangles": 101452,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 14
+    },
+    "prediction": {
+     "raw_volume_ml": 402.638,
+     "smoothed_volume_ml": 402.655,
+     "raw_area_cm2": 467.54,
+     "smoothed_area_cm2": 421.37,
+     "triangles": 57868,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 12
+    },
+    "seconds_meshing": 0.38,
+    "mesh_symmetric_mean_surface_distance_mm": 16.41,
+    "mesh_symmetric_hd95_mm": 82.074,
+    "mesh_hd95_max_of_directed_mm": 86.954,
+    "mesh_hausdorff_mm": 99.129,
+    "seconds_distance": 2.32,
+    "monai_voxel_hd95_mm": 87.67
+   },
+   "tumor": {
+    "reference_voxel_ml": 16.882,
+    "prediction_voxel_ml": 18.357,
+    "reference": {
+     "raw_volume_ml": 16.798,
+     "smoothed_volume_ml": 16.77,
+     "raw_area_cm2": 38.66,
+     "smoothed_area_cm2": 34.07,
+     "triangles": 4420,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 18.253,
+     "smoothed_volume_ml": 18.205,
+     "raw_area_cm2": 40.62,
+     "smoothed_area_cm2": 37.04,
+     "triangles": 4896,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 2
+    },
+    "seconds_meshing": 0.06,
+    "mesh_symmetric_mean_surface_distance_mm": 3.012,
+    "mesh_symmetric_hd95_mm": 3.653,
+    "mesh_hd95_max_of_directed_mm": 52.388,
+    "mesh_hausdorff_mm": 58.715,
+    "seconds_distance": 0.05,
+    "monai_voxel_hd95_mm": 51.15
+   }
+  },
+  {
+   "patient_id": "KiTS-00045",
+   "kidney": {
+    "reference_voxel_ml": 205.089,
+    "prediction_voxel_ml": 193.519,
+    "reference": {
+     "raw_volume_ml": 204.774,
+     "smoothed_volume_ml": 204.699,
+     "raw_area_cm2": 377.16,
+     "smoothed_area_cm2": 324.37,
+     "triangles": 43712,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 11
+    },
+    "prediction": {
+     "raw_volume_ml": 193.253,
+     "smoothed_volume_ml": 193.194,
+     "raw_area_cm2": 344.19,
+     "smoothed_area_cm2": 309.02,
+     "triangles": 42424,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 7
+    },
+    "seconds_meshing": 0.21,
+    "mesh_symmetric_mean_surface_distance_mm": 1.265,
+    "mesh_symmetric_hd95_mm": 5.096,
+    "mesh_hd95_max_of_directed_mm": 6.103,
+    "mesh_hausdorff_mm": 22.218,
+    "seconds_distance": 0.53,
+    "monai_voxel_hd95_mm": 6.18
+   },
+   "tumor": {
+    "reference_voxel_ml": 66.768,
+    "prediction_voxel_ml": 67.77,
+    "reference": {
+     "raw_volume_ml": 66.61,
+     "smoothed_volume_ml": 66.526,
+     "raw_area_cm2": 111.7,
+     "smoothed_area_cm2": 98.39,
+     "triangles": 12484,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 67.534,
+     "smoothed_volume_ml": 67.41,
+     "raw_area_cm2": 123.99,
+     "smoothed_area_cm2": 111.73,
+     "triangles": 15268,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 4
+    },
+    "seconds_meshing": 0.09,
+    "mesh_symmetric_mean_surface_distance_mm": 25.945,
+    "mesh_symmetric_hd95_mm": 131.91,
+    "mesh_hd95_max_of_directed_mm": 135.179,
+    "mesh_hausdorff_mm": 141.852,
+    "seconds_distance": 0.31,
+    "monai_voxel_hd95_mm": 135.16
+   }
+  },
+  {
+   "patient_id": "KiTS-00182",
+   "kidney": {
+    "reference_voxel_ml": 546.959,
+    "prediction_voxel_ml": 508.434,
+    "reference": {
+     "raw_volume_ml": 546.802,
+     "smoothed_volume_ml": 547.114,
+     "raw_area_cm2": 657.35,
+     "smoothed_area_cm2": 567.4,
+     "triangles": 71520,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 20
+    },
+    "prediction": {
+     "raw_volume_ml": 508.332,
+     "smoothed_volume_ml": 508.595,
+     "raw_area_cm2": 604.9,
+     "smoothed_area_cm2": 543.21,
+     "triangles": 74056,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 19
+    },
+    "seconds_meshing": 0.43,
+    "mesh_symmetric_mean_surface_distance_mm": 1.017,
+    "mesh_symmetric_hd95_mm": 3.188,
+    "mesh_hd95_max_of_directed_mm": 3.386,
+    "mesh_hausdorff_mm": 211.84,
+    "seconds_distance": 1.03,
+    "monai_voxel_hd95_mm": 3.0
+   },
+   "tumor": {
+    "reference_voxel_ml": 6.453,
+    "prediction_voxel_ml": 7.887,
+    "reference": {
+     "raw_volume_ml": 6.384,
+     "smoothed_volume_ml": 6.345,
+     "raw_area_cm2": 23.75,
+     "smoothed_area_cm2": 21.17,
+     "triangles": 2508,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 7.808,
+     "smoothed_volume_ml": 7.761,
+     "raw_area_cm2": 23.61,
+     "smoothed_area_cm2": 21.63,
+     "triangles": 2868,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 2
+    },
+    "seconds_meshing": 0.16,
+    "mesh_symmetric_mean_surface_distance_mm": 16.797,
+    "mesh_symmetric_hd95_mm": 197.36,
+    "mesh_hd95_max_of_directed_mm": 200.626,
+    "mesh_hausdorff_mm": 204.489,
+    "seconds_distance": 0.06,
+    "monai_voxel_hd95_mm": 200.01
+   }
+  },
+  {
+   "patient_id": "KiTS-00002",
+   "kidney": {
+    "reference_voxel_ml": 541.414,
+    "prediction_voxel_ml": 533.142,
+    "reference": {
+     "raw_volume_ml": 540.982,
+     "smoothed_volume_ml": 540.875,
+     "raw_area_cm2": 567.05,
+     "smoothed_area_cm2": 504.92,
+     "triangles": 67248,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 10
+    },
+    "prediction": {
+     "raw_volume_ml": 532.866,
+     "smoothed_volume_ml": 532.904,
+     "raw_area_cm2": 552.22,
+     "smoothed_area_cm2": 500.44,
+     "triangles": 67252,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 15
+    },
+    "seconds_meshing": 0.41,
+    "mesh_symmetric_mean_surface_distance_mm": 0.786,
+    "mesh_symmetric_hd95_mm": 2.675,
+    "mesh_hd95_max_of_directed_mm": 2.849,
+    "mesh_hausdorff_mm": 16.976,
+    "seconds_distance": 0.81,
+    "monai_voxel_hd95_mm": 3.0
+   },
+   "tumor": {
+    "reference_voxel_ml": 35.124,
+    "prediction_voxel_ml": 43.392,
+    "reference": {
+     "raw_volume_ml": 35.012,
+     "smoothed_volume_ml": 34.971,
+     "raw_area_cm2": 62.12,
+     "smoothed_area_cm2": 55.36,
+     "triangles": 7384,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 3
+    },
+    "prediction": {
+     "raw_volume_ml": 43.258,
+     "smoothed_volume_ml": 43.206,
+     "raw_area_cm2": 70.14,
+     "smoothed_area_cm2": 63.43,
+     "triangles": 8656,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 7
+    },
+    "seconds_meshing": 0.12,
+    "mesh_symmetric_mean_surface_distance_mm": 2.805,
+    "mesh_symmetric_hd95_mm": 6.025,
+    "mesh_hd95_max_of_directed_mm": 6.473,
+    "mesh_hausdorff_mm": 199.251,
+    "seconds_distance": 0.12,
+    "monai_voxel_hd95_mm": 6.18
+   }
+  },
+  {
+   "patient_id": "KiTS-00201",
+   "kidney": {
+    "reference_voxel_ml": 605.09,
+    "prediction_voxel_ml": 607.054,
+    "reference": {
+     "raw_volume_ml": 605.363,
+     "smoothed_volume_ml": 606.279,
+     "raw_area_cm2": 741.56,
+     "smoothed_area_cm2": 634.44,
+     "triangles": 87864,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 25
+    },
+    "prediction": {
+     "raw_volume_ml": 607.322,
+     "smoothed_volume_ml": 608.133,
+     "raw_area_cm2": 682.52,
+     "smoothed_area_cm2": 609.29,
+     "triangles": 84896,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 19
+    },
+    "seconds_meshing": 0.47,
+    "mesh_symmetric_mean_surface_distance_mm": 0.44,
+    "mesh_symmetric_hd95_mm": 1.32,
+    "mesh_hd95_max_of_directed_mm": 1.46,
+    "mesh_hausdorff_mm": 8.899,
+    "seconds_distance": 0.77,
+    "monai_voxel_hd95_mm": 1.5
+   },
+   "tumor": {
+    "reference_voxel_ml": 2.639,
+    "prediction_voxel_ml": 3.061,
+    "reference": {
+     "raw_volume_ml": 2.591,
+     "smoothed_volume_ml": 2.557,
+     "raw_area_cm2": 12.17,
+     "smoothed_area_cm2": 10.51,
+     "triangles": 1364,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 3.015,
+     "smoothed_volume_ml": 2.988,
+     "raw_area_cm2": 11.62,
+     "smoothed_area_cm2": 10.67,
+     "triangles": 1452,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "seconds_meshing": 0.06,
+    "mesh_symmetric_mean_surface_distance_mm": 1.84,
+    "mesh_symmetric_hd95_mm": 6.179,
+    "mesh_hd95_max_of_directed_mm": 7.164,
+    "mesh_hausdorff_mm": 8.899,
+    "seconds_distance": 0.02,
+    "monai_voxel_hd95_mm": 7.5
+   }
+  },
+  {
+   "patient_id": "KiTS-00030",
+   "kidney": {
+    "reference_voxel_ml": 207.61,
+    "prediction_voxel_ml": 284.799,
+    "reference": {
+     "raw_volume_ml": 207.11,
+     "smoothed_volume_ml": 206.849,
+     "raw_area_cm2": 365.81,
+     "smoothed_area_cm2": 316.93,
+     "triangles": 40844,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 10
+    },
+    "prediction": {
+     "raw_volume_ml": 284.003,
+     "smoothed_volume_ml": 283.541,
+     "raw_area_cm2": 551.53,
+     "smoothed_area_cm2": 499.03,
+     "triangles": 66820,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 14
+    },
+    "seconds_meshing": 0.25,
+    "mesh_symmetric_mean_surface_distance_mm": 10.838,
+    "mesh_symmetric_hd95_mm": 52.328,
+    "mesh_hd95_max_of_directed_mm": 57.428,
+    "mesh_hausdorff_mm": 80.065,
+    "seconds_distance": 1.02,
+    "monai_voxel_hd95_mm": 55.6
+   },
+   "tumor": {
+    "reference_voxel_ml": 1465.729,
+    "prediction_voxel_ml": 1353.625,
+    "reference": {
+     "raw_volume_ml": 1465.276,
+     "smoothed_volume_ml": 1465.015,
+     "raw_area_cm2": 851.51,
+     "smoothed_area_cm2": 754.77,
+     "triangles": 93552,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 1353.106,
+     "smoothed_volume_ml": 1352.821,
+     "raw_area_cm2": 759.77,
+     "smoothed_area_cm2": 685.21,
+     "triangles": 92400,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 20
+    },
+    "seconds_meshing": 0.41,
+    "mesh_symmetric_mean_surface_distance_mm": 2.173,
+    "mesh_symmetric_hd95_mm": 8.431,
+    "mesh_hd95_max_of_directed_mm": 8.804,
+    "mesh_hausdorff_mm": 17.436,
+    "seconds_distance": 1.64,
+    "monai_voxel_hd95_mm": 8.62
+   }
+  },
+  {
+   "patient_id": "KiTS-00169",
+   "kidney": {
+    "reference_voxel_ml": 377.527,
+    "prediction_voxel_ml": 378.928,
+    "reference": {
+     "raw_volume_ml": 377.364,
+     "smoothed_volume_ml": 377.531,
+     "raw_area_cm2": 570.3,
+     "smoothed_area_cm2": 494.53,
+     "triangles": 63764,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 13
+    },
+    "prediction": {
+     "raw_volume_ml": 380.355,
+     "smoothed_volume_ml": 380.152,
+     "raw_area_cm2": 479.97,
+     "smoothed_area_cm2": 434.83,
+     "triangles": 59084,
+     "open_or_non_manifold_edges": 8,
+     "connected_components": 9
+    },
+    "seconds_meshing": 0.37,
+    "mesh_symmetric_mean_surface_distance_mm": 1.038,
+    "mesh_symmetric_hd95_mm": 3.523,
+    "mesh_hd95_max_of_directed_mm": 4.209,
+    "mesh_hausdorff_mm": 268.404,
+    "seconds_distance": 1.03,
+    "monai_voxel_hd95_mm": 4.24
+   },
+   "tumor": {
+    "reference_voxel_ml": 41.955,
+    "prediction_voxel_ml": 23.966,
+    "reference": {
+     "raw_volume_ml": 41.815,
+     "smoothed_volume_ml": 41.747,
+     "raw_area_cm2": 87.08,
+     "smoothed_area_cm2": 76.77,
+     "triangles": 9424,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 23.879,
+     "smoothed_volume_ml": 23.846,
+     "raw_area_cm2": 45.17,
+     "smoothed_area_cm2": 41.49,
+     "triangles": 5504,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "seconds_meshing": 0.14,
+    "mesh_symmetric_mean_surface_distance_mm": 4.238,
+    "mesh_symmetric_hd95_mm": 15.286,
+    "mesh_hd95_max_of_directed_mm": 18.022,
+    "mesh_hausdorff_mm": 22.979,
+    "seconds_distance": 0.16,
+    "monai_voxel_hd95_mm": 18.12
+   }
+  },
+  {
+   "patient_id": "KiTS-00044",
+   "kidney": {
+    "reference_voxel_ml": 525.444,
+    "prediction_voxel_ml": 620.74,
+    "reference": {
+     "raw_volume_ml": 525.148,
+     "smoothed_volume_ml": 525.217,
+     "raw_area_cm2": 668.23,
+     "smoothed_area_cm2": 580.26,
+     "triangles": 73888,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 13
+    },
+    "prediction": {
+     "raw_volume_ml": 620.537,
+     "smoothed_volume_ml": 620.698,
+     "raw_area_cm2": 698.41,
+     "smoothed_area_cm2": 631.47,
+     "triangles": 85256,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 9
+    },
+    "seconds_meshing": 0.54,
+    "mesh_symmetric_mean_surface_distance_mm": 2.129,
+    "mesh_symmetric_hd95_mm": 9.703,
+    "mesh_hd95_max_of_directed_mm": 17.466,
+    "mesh_hausdorff_mm": 37.056,
+    "seconds_distance": 1.38,
+    "monai_voxel_hd95_mm": 16.6
+   },
+   "tumor": {
+    "reference_voxel_ml": 129.225,
+    "prediction_voxel_ml": 41.837,
+    "reference": {
+     "raw_volume_ml": 129.048,
+     "smoothed_volume_ml": 128.971,
+     "raw_area_cm2": 164.78,
+     "smoothed_area_cm2": 144.03,
+     "triangles": 17988,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 41.617,
+     "smoothed_volume_ml": 41.43,
+     "raw_area_cm2": 99.9,
+     "smoothed_area_cm2": 89.9,
+     "triangles": 12476,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 5
+    },
+    "seconds_meshing": 0.24,
+    "mesh_symmetric_mean_surface_distance_mm": 5.718,
+    "mesh_symmetric_hd95_mm": 19.251,
+    "mesh_hd95_max_of_directed_mm": 22.707,
+    "mesh_hausdorff_mm": 31.291,
+    "seconds_distance": 0.43,
+    "monai_voxel_hd95_mm": 23.04
+   }
+  },
+  {
+   "patient_id": "KiTS-00047",
+   "kidney": {
+    "reference_voxel_ml": 384.753,
+    "prediction_voxel_ml": 411.065,
+    "reference": {
+     "raw_volume_ml": 384.389,
+     "smoothed_volume_ml": 384.342,
+     "raw_area_cm2": 650.91,
+     "smoothed_area_cm2": 566.11,
+     "triangles": 72176,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 6
+    },
+    "prediction": {
+     "raw_volume_ml": 556.395,
+     "smoothed_volume_ml": 537.564,
+     "raw_area_cm2": 576.57,
+     "smoothed_area_cm2": 519.69,
+     "triangles": 70570,
+     "open_or_non_manifold_edges": 210,
+     "connected_components": 17
+    },
+    "seconds_meshing": 0.89,
+    "mesh_symmetric_mean_surface_distance_mm": 12.67,
+    "mesh_symmetric_hd95_mm": 7.911,
+    "mesh_hd95_max_of_directed_mm": 341.395,
+    "mesh_hausdorff_mm": 372.372,
+    "seconds_distance": 3.5,
+    "monai_voxel_hd95_mm": 346.76
+   },
+   "tumor": {
+    "reference_voxel_ml": 155.604,
+    "prediction_voxel_ml": 155.722,
+    "reference": {
+     "raw_volume_ml": 155.365,
+     "smoothed_volume_ml": 155.236,
+     "raw_area_cm2": 225.63,
+     "smoothed_area_cm2": 198.48,
+     "triangles": 24432,
+     "open_or_non_manifold_edges": 0,
+     "connected_components": 1
+    },
+    "prediction": {
+     "raw_volume_ml": 259.187,
+     "smoothed_volume_ml": 274.036,
+     "raw_area_cm2": 228.25,
+     "smoothed_area_cm2": 206.61,
+     "triangles": 27962,
+     "open_or_non_manifold_edges": 88,
+     "connected_components": 7
+    },
+    "seconds_meshing": 0.49,
+    "mesh_symmetric_mean_surface_distance_mm": 77.304,
+    "mesh_symmetric_hd95_mm": 402.036,
+    "mesh_hd95_max_of_directed_mm": 417.484,
+    "mesh_hausdorff_mm": 432.392,
+    "seconds_distance": 2.26,
+    "monai_voxel_hd95_mm": 417.19
+   }
+  }
+ ]
+}

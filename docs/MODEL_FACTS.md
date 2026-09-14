@@ -12,7 +12,7 @@
 **Validation and performance** (n=32 held-out cases, vs clinician reference):
 
 - Kidney Dice 0.9201 (0.8892-0.9459); mass Dice 0.6687 (0.5769-0.755).
-- HD95: kidney 14.2059 (4.0-29.9191) mm, mass 37.3941 (20.4134-57.9997) mm.
+- HD95: kidney 21.3087 (6.0006-44.8766) mm, mass 56.0916 (30.6212-87.0022) mm.
 - Subgroup breakdown by sex, age and scanner: see validation report.
 
 
