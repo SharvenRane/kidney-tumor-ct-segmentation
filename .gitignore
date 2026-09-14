@@ -14,3 +14,8 @@ data/
 *.nii.gz
 *.dcm
 outputs/tensorrt/
+
+# MONAI Label runtime folders (server log, empty bin and model dirs)
+monailabel_app/logs/
+monailabel_app/bin/
+monailabel_app/model/

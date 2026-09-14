@@ -1,0 +1,422 @@
+{
+ "server_models": [
+  "kidney_tumor"
+ ],
+ "n_cases": 32,
+ "all_labels_on_reference_grid": true,
+ "dice_kidney_original_space": {
+  "mean": 0.9301798380981371,
+  "median": 0.9597062160636971,
+  "n": 32
+ },
+ "dice_tumor_original_space": {
+  "mean": 0.6763241828055808,
+  "median": 0.773612005626181,
+  "n": 32
+ },
+ "seconds_per_request": {
+  "median": 4.391561381500196,
+  "p95": 8.900549274650166,
+  "first": 8.666065183999308
+ },
+ "labels_saved": 3,
+ "datastore_stats_after": {
+  "total": 32,
+  "completed": 3,
+  "label_tags": {
+   "final": 3
+  }
+ },
+ "next_sample_from_random_strategy": {
+  "id": "KiTS-00167",
+  "weight": 1789350933,
+  "ts": 1789350748,
+  "name": "KiTS-00167.nii.gz"
+ },
+ "per_case": [
+  {
+   "patient_id": "KiTS-00037",
+   "seconds": 8.666065183999308,
+   "shape": [
+    512,
+    512,
+    91
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.7148687376312829,
+   "dice_tumor": 0.020314614002140505
+  },
+  {
+   "patient_id": "KiTS-00205",
+   "seconds": 3.5418168020005396,
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9544428275131865,
+   "dice_tumor": 0.3241367916735503
+  },
+  {
+   "patient_id": "KiTS-00100",
+   "seconds": 8.793238091000603,
+   "shape": [
+    512,
+    512,
+    470
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9790897088087063,
+   "dice_tumor": 0.5461263702426408
+  },
+  {
+   "patient_id": "KiTS-00085",
+   "seconds": 3.2018418739999106,
+   "shape": [
+    512,
+    512,
+    87
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9736092063681355,
+   "dice_tumor": 0.4190844616376531
+  },
+  {
+   "patient_id": "KiTS-00196",
+   "seconds": 5.363244981000207,
+   "shape": [
+    512,
+    512,
+    178
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9783876516025769,
+   "dice_tumor": 0.907294277995473
+  },
+  {
+   "patient_id": "KiTS-00167",
+   "seconds": 4.879203249999591,
+   "shape": [
+    512,
+    512,
+    103
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9744304791830322,
+   "dice_tumor": 0.694909895668669
+  },
+  {
+   "patient_id": "KiTS-00064",
+   "seconds": 1.690723230999538,
+   "shape": [
+    512,
+    512,
+    53
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9599395058234094,
+   "dice_tumor": 0.17270448849396217
+  },
+  {
+   "patient_id": "KiTS-00202",
+   "seconds": 9.031707387999631,
+   "shape": [
+    512,
+    512,
+    383
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9753984989055385,
+   "dice_tumor": 0.8127139658859317
+  },
+  {
+   "patient_id": "KiTS-00168",
+   "seconds": 2.8999595620007312,
+   "shape": [
+    512,
+    512,
+    83
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9544147601476015,
+   "dice_tumor": 0.8527025706187078
+  },
+  {
+   "patient_id": "KiTS-00080",
+   "seconds": 3.2484004589996403,
+   "shape": [
+    512,
+    512,
+    88
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9750802032989704,
+   "dice_tumor": 0.8873283287784965
+  },
+  {
+   "patient_id": "KiTS-00003",
+   "seconds": 5.0503134660002615,
+   "shape": [
+    512,
+    512,
+    270
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9833480346011014,
+   "dice_tumor": 0.9101045296167247
+  },
+  {
+   "patient_id": "KiTS-00104",
+   "seconds": 4.7139347889997225,
+   "shape": [
+    512,
+    512,
+    114
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9563146428646968,
+   "dice_tumor": 0.7960988511447227
+  },
+  {
+   "patient_id": "KiTS-00042",
+   "seconds": 6.316280593999181,
+   "shape": [
+    512,
+    512,
+    301
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9208562847125732,
+   "dice_tumor": 0.8838900994954141
+  },
+  {
+   "patient_id": "KiTS-00013",
+   "seconds": 1.9279975399995237,
+   "shape": [
+    512,
+    512,
+    92
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.959472926303985,
+   "dice_tumor": 0.8876724913395472
+  },
+  {
+   "patient_id": "KiTS-00061",
+   "seconds": 1.0200912399996014,
+   "shape": [
+    512,
+    512,
+    29
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9605577285531889,
+   "dice_tumor": 0.8797152442516979
+  },
+  {
+   "patient_id": "KiTS-00073",
+   "seconds": 7.192189228000643,
+   "shape": [
+    512,
+    512,
+    145
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9423991885705897,
+   "dice_tumor": 0.9216867997582278
+  },
+  {
+   "patient_id": "KiTS-00005",
+   "seconds": 15.20684999400055,
+   "shape": [
+    512,
+    512,
+    834
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.8739242367213955,
+   "dice_tumor": 0.6768623425841854
+  },
+  {
+   "patient_id": "KiTS-00021",
+   "seconds": 1.449024360000294,
+   "shape": [
+    512,
+    512,
+    38
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9430753602468114,
+   "dice_tumor": 0.16447903356952026
+  },
+  {
+   "patient_id": "KiTS-00209",
+   "seconds": 3.8956052779994934,
+   "shape": [
+    512,
+    512,
+    102
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9790246007768666,
+   "dice_tumor": 0.46795523906408953
+  },
+  {
+   "patient_id": "KiTS-00036",
+   "seconds": 4.414996896000048,
+   "shape": [
+    512,
+    512,
+    163
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9616571191879401,
+   "dice_tumor": 0.8441203064769428
+  },
+  {
+   "patient_id": "KiTS-00111",
+   "seconds": 4.639279820000411,
+   "shape": [
+    512,
+    512,
+    186
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9647995953186865,
+   "dice_tumor": 0.8504012686818204
+  },
+  {
+   "patient_id": "KiTS-00140",
+   "seconds": 5.487234490999981,
+   "shape": [
+    512,
+    512,
+    279
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9687829411003508,
+   "dice_tumor": 0.24015209125475284
+  },
+  {
+   "patient_id": "KiTS-00152",
+   "seconds": 1.2853950050002823,
+   "shape": [
+    512,
+    512,
+    38
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.976712725216888,
+   "dice_tumor": 0.883985200845666
+  },
+  {
+   "patient_id": "KiTS-00015",
+   "seconds": 1.7595517890003975,
+   "shape": [
+    512,
+    512,
+    75
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.5915468364716588,
+   "dice_tumor": 0.9078174802885421
+  },
+  {
+   "patient_id": "KiTS-00045",
+   "seconds": 1.4175218830005178,
+   "shape": [
+    512,
+    512,
+    62
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.8956117930214543,
+   "dice_tumor": 0.7134479624487966
+  },
+  {
+   "patient_id": "KiTS-00182",
+   "seconds": 4.368125867000344,
+   "shape": [
+    512,
+    512,
+    93
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.953629436534991,
+   "dice_tumor": 0.5823403605255117
+  },
+  {
+   "patient_id": "KiTS-00002",
+   "seconds": 4.988640528999895,
+   "shape": [
+    512,
+    512,
+    261
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9665362472017803,
+   "dice_tumor": 0.8762428697044168
+  },
+  {
+   "patient_id": "KiTS-00201",
+   "seconds": 2.399313298999914,
+   "shape": [
+    512,
+    512,
+    96
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9822594319093751,
+   "dice_tumor": 0.6619983840560194
+  },
+  {
+   "patient_id": "KiTS-00030",
+   "seconds": 1.1605754289994366,
+   "shape": [
+    512,
+    512,
+    38
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.7948053930575016,
+   "dice_tumor": 0.9442871223914976
+  },
+  {
+   "patient_id": "KiTS-00169",
+   "seconds": 3.437685879000128,
+   "shape": [
+    512,
+    512,
+    101
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9494607193195072,
+   "dice_tumor": 0.7159262886139055
+  },
+  {
+   "patient_id": "KiTS-00044",
+   "seconds": 4.689670143000512,
+   "shape": [
+    512,
+    512,
+    101
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.8832895916671102,
+   "dice_tumor": 0.4447489585617189
+  },
+  {
+   "patient_id": "KiTS-00047",
+   "seconds": 6.92554448699957,
+   "shape": [
+    512,
+    512,
+    142
+   ],
+   "same_grid_as_reference": true,
+   "dice_kidney": 0.9180284064994956,
+   "dice_tumor": 0.7511251601076393
+  }
+ ]
+}

@@ -87,6 +87,7 @@ comes from a real training run; nothing here is hand entered.
 | `docs/GMLP_MAPPING.md` | Each of the ten Good Machine Learning Practice principles mapped to what this project does. |
 | `src/monitor.py` | Working drift monitoring: embedding MMD and KS, output PSI and Jensen Shannon, Mahalanobis out of distribution detection. Its thresholds are the triggers in the PCCP modification protocol. |
 | `docs/TENSORRT_DEPLOYMENT.md` | TensorRT FP32 and FP16 engines evaluated at the validated Dice, with per volume latency. |
+| `monailabel_app/` | MONAI Label app serving the model to annotation clients, with a REST driven evaluation. |
 | `bundle/` | MONAI Bundle: schema validated, version pinned, reproducible packaging of the model and its inference pipeline. |
 
 ## TensorRT deployment
@@ -110,6 +111,41 @@ times and limits are in `docs/TENSORRT_DEPLOYMENT.md`.
 ```
 python src/deploy_tensorrt.py --checkpoint outputs/best.pt
 ```
+
+## Annotation workflow with MONAI Label
+
+`monailabel_app/` serves the trained model through MONAI Label, so an annotation client such as 3D
+Slicer or OHIF can ask for a pre segmentation, correct it, and save the correction back. The app
+reuses the validated preprocessing and sliding window settings, and MONAI Label's `Restored`
+transform returns the label on the original CT grid, which is what a viewer overlays.
+
+`monailabel_app/evaluate_server.py` drives a running server exactly as a client does, over the
+REST API, for all 32 held out cases: request a segmentation, score it against the clinician
+reference, and for 3 cases save a label back as a stand in for a radiologist's corrected mask.
+
+| measured through the MONAI Label REST API | result |
+|---|---|
+| kidney Dice, original CT grid, 32 cases | 0.930 mean, 0.960 median |
+| tumor Dice, original CT grid, 32 cases | 0.676 mean, 0.774 median |
+| labels returned on the reference CT grid (shape and affine) | 32 of 32 |
+| seconds per request, load to returned label file | 4.39 median, 8.90 p95 |
+| labels saved back, datastore after | 3 saved, datastore reports 3 of 32 completed |
+| next study from the random strategy | a study not yet labelled |
+
+These Dice values are slightly higher than the 0.920 and 0.669 in the validation report because they
+are scored on the original CT voxel grid, while `evaluate.py` scores on the 1.5 mm resampled grid.
+It is the same model and the same predictions measured in a different space, not an improvement.
+Request time includes reading the CT, resampling, GPU inference, restoring to the original grid,
+writing the NIfTI label and the HTTP transfer.
+
+```
+pip install -r monailabel_app/requirements.txt
+python -m monailabel.main start_server --app monailabel_app --studies <folder of CT .nii.gz>     --conf model_path outputs/best.pt --port 8765
+python monailabel_app/evaluate_server.py --server http://127.0.0.1:8765 --dataset <dataset.json>
+```
+
+The app defines inference and two sample selection strategies. It does not define a training task,
+so corrected labels are stored but not used to retrain the model here.
 
 ## Explainability
 
